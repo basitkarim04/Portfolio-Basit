@@ -124,7 +124,7 @@ export default function Home() {
       {/* Header */}
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center">
-          <nav className="hidden w-fit gap-1 rounded-full border border-white/10 bg-white/10 p-1.5 backdrop-blur-xl md:flex">
+          <nav className="hidden w-fit gap-1 rounded-full border border-white/10 bg-black/60 shadow-lg p-1.5 backdrop-blur-xl md:flex">
             {NAV.slice(0, 4).map(([l, h]) => (
               <a
                 key={h}
@@ -137,13 +137,13 @@ export default function Home() {
           </nav>
           <button
             onClick={() => setMenu(!menu)}
-            className="w-fit rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl md:hidden"
+            className="w-fit rounded-full border border-white/10 bg-black/60 px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl md:hidden"
           >
             {menu ? "Close" : "Menu"}
           </button>
           <a
             href="#home"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/60 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
           >
             EA
           </a>
