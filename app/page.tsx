@@ -2,7 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const NAME = "Ashfaq";
+const NAME = "Eshfaq";
+const FULL_NAME = "Eshfaq Ahmad";
+const EMAIL = "eshfaqahmad33@gmail.com";
+const PHONE = "+92 334 6667631";
+const RESUME = "/Eshfaq-Ahmad-Resume.pdf";
+const TOOLS = ["Figma", "Framer", "Photoshop", "Illustrator", "Miro", "Claude.ai", "Google Stitch", "Jira", "Slack"];
 const NAV = [
   ["About me", "#about"],
   ["Work", "#work"],
@@ -11,8 +16,8 @@ const NAV = [
   ["Let's talk", "#contact"],
 ];
 const SKILLS = [
-  "UI/UX Design", "Product Design", "Visual Design", "Design Systems", "User Experience",
-  "Interaction Design", "Prototyping", "Wireframing", "User Testing", "User Research",
+  "User Interface Design", "Advanced Prototyping", "Typography & Grid Layouts", "Scalable Design Systems",
+  "Wireframing & User Flows", "User Research & Testing", "Accessibility (WCAG)", "Interaction Design",
 ];
 const PROJECT_COLORS = [
   "from-blue-600 to-indigo-900", "from-amber-500 to-rose-700", "from-emerald-500 to-teal-900",
@@ -60,9 +65,10 @@ const STEPS = [
   },
 ];
 const JOURNEY = [
-  ["2025 — Now", "UI/UX Designer", "Company Name", "Designing interfaces, systems and experiences for complex products."],
-  ["2024", "Design Intern", "Studio Name", "Worked on websites, dashboards and brand visuals."],
-  ["2020 — 2024", "B.Tech / Degree", "University Name", "Where curiosity for design and technology began."],
+  ["Nov 2024 — Present", "UI/UX Designer", "Slicon Systems", "Designing web and mobile applications from first concept to final UI — wireframes, user flows and high-fidelity Figma designs, accessible design systems, and redesigns that improve usability and navigation across multiple projects."],
+  ["Jan 2023 — Nov 2024", "UI/UX Designer", "Avialdo Solutions", "Redesigned web and mobile apps for smoother experiences, built design systems for consistency, applied accessibility best practices, and helped onboard 100+ clients through improved UX."],
+  ["Certification", "UI Design", "California Institute of the Arts", "Specialized program in interface craft."],
+  ["Certification", "UX Certification", "Memorisely Bootcamps", "Prototyping, design systems, typography and interaction design."],
 ];
 
 function useReveal() {
@@ -140,7 +146,7 @@ export default function Home() {
             href="#home"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
           >
-            {NAME.slice(0, 2).toUpperCase()}
+            EA
           </a>
           <a
             href="#contact"
@@ -229,9 +235,9 @@ export default function Home() {
       <section className="bg-[var(--dark2)] py-14 text-white">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-5 sm:grid-cols-3">
           {[
-            ["100+", "Screens\nDesigned"],
+            ["100+", "Clients\nOnboarded"],
             ["∞", "Ideas"],
-            ["05+", "Digital\nExperience"],
+            ["03+", "Years of\nExperience"],
           ].map(([n, l]) => (
             <div key={l} className="flex items-center gap-5">
               <span className="text-6xl font-black italic">{n}</span>
@@ -262,7 +268,7 @@ export default function Home() {
           <h2 className="reveal text-6xl font-black uppercase md:text-8xl">My Journey.</h2>
           <div className="mt-16 border-l border-white/20">
             {JOURNEY.map(([y, r, o, d]) => (
-              <div key={r} className="reveal relative pb-14 pl-10">
+              <div key={o} className="reveal relative pb-14 pl-10">
                 <span className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-[var(--accent)]" />
                 <p className="text-sm tracking-widest text-white/40">{y}</p>
                 <h3 className="mt-2 text-2xl font-bold">{r}</h3>
@@ -271,7 +277,17 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <a href="#" className="inline-block rounded-md border border-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black">
+          <div className="reveal mb-14">
+            <p className="text-xs font-bold tracking-widest text-white/40">TOOLS</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {TOOLS.map((t) => (
+                <span key={t} className="rounded-full border border-white/20 px-5 py-2 text-sm text-white/80">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+          <a href={RESUME} download className="inline-block rounded-md border border-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black">
             Download resume ↓
           </a>
         </div>
@@ -286,9 +302,15 @@ export default function Home() {
         <p className="reveal mx-auto mt-8 max-w-md text-neutral-600">
           Have a project, idea, or a problem to solve? Let&apos;s turn it into a great experience together.
         </p>
-        <a href="mailto:hello@example.com" className="reveal mt-10 inline-block rounded-md bg-[var(--accent)] px-10 py-5 text-sm font-bold uppercase tracking-widest text-white hover:brightness-110">
+        <a href={`mailto:${EMAIL}`} className="reveal mt-10 inline-block rounded-md bg-[var(--accent)] px-10 py-5 text-sm font-bold uppercase tracking-widest text-white hover:brightness-110">
           Start a conversation ↗
         </a>
+        <div className="reveal mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold">
+          <a href={`mailto:${EMAIL}`} className="hover:text-[var(--accent)]">{EMAIL}</a>
+          <a href={`tel:${PHONE.replace(/ /g, "")}`} className="hover:text-[var(--accent)]">{PHONE}</a>
+          <a href="#" className="hover:text-[var(--accent)]">Behance ↗</a>
+          <a href="#" className="hover:text-[var(--accent)]">LinkedIn ↗</a>
+        </div>
       </section>
 
       {/* Footer */}
@@ -311,7 +333,7 @@ export default function Home() {
         </div>
         <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 py-6 text-xs text-white/50">
           <span>Designed &amp; built with curiosity.</span>
-          <span>© 2026 {NAME} • All rights reserved.</span>
+          <span>© 2026 {FULL_NAME} • All rights reserved.</span>
         </div>
       </footer>
     </main>
@@ -584,11 +606,11 @@ function Process() {
 }
 
 const VISION = [
-  "I believe the most",
-  "powerful designs are the ones",
-  "that strip away the noise",
-  "to reveal what truly matters —",
-  "clear, human experiences.",
+  "I design web and mobile",
+  "products that balance",
+  "user needs with business goals —",
+  "usable, accessible, and",
+  "built to scale.",
 ];
 const LOGOS = ["Company One", "Studio Two", "Brand Three", "Agency Four", "Startup Five", "Product Six"];
 
@@ -661,11 +683,12 @@ function About() {
 
         <div className="mt-14 grid gap-12 md:grid-cols-[220px_1fr]">
           <div>
-            <p className="text-sm text-neutral-500">Returning Clients</p>
+            <p className="text-sm text-neutral-500">Clients Onboarded</p>
             <div className="mt-2 flex text-7xl font-medium tracking-tight text-neutral-800">
-              <RollingDigit to={9} on={seen} delay={0} />
-              <RollingDigit to={2} on={seen} delay={200} />
-              <span className="leading-none">%</span>
+              <RollingDigit to={1} on={seen} delay={0} />
+              <RollingDigit to={0} on={seen} delay={150} />
+              <RollingDigit to={0} on={seen} delay={300} />
+              <span className="leading-none text-[var(--accent)]">+</span>
             </div>
             <div className="mt-12 flex items-center gap-3">
               <div className="flex">
@@ -679,7 +702,7 @@ function About() {
               </div>
               <div>
                 <p className="text-xs tracking-widest text-[var(--accent)]">★★★★★</p>
-                <p className="text-[11px] leading-tight text-neutral-500">Trusted by 20+<br />Clients</p>
+                <p className="text-[11px] leading-tight text-neutral-500">3+ years designing<br />web &amp; mobile</p>
               </div>
             </div>
           </div>

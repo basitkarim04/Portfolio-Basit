@@ -6,8 +6,8 @@ const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
 const caveat = Caveat({ variable: "--font-hand", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ashfaq — UI/UX Designer",
-  description: "Portfolio of Ashfaq, UI/UX Designer.",
+  title: "Eshfaq Ahmad — UI/UX Designer",
+  description: "Eshfaq Ahmad — UI/UX Designer with 3+ years designing web and mobile products. User research, prototyping, design systems and interaction design.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
