@@ -16,24 +16,18 @@ const NAV = [
   ["Resume", "#resume"],
   ["Let's talk", "#contact"],
 ];
-const PROJECT_COLORS = [
-  "from-blue-600 to-indigo-900", "from-amber-500 to-rose-700", "from-emerald-500 to-teal-900",
-  "from-fuchsia-500 to-purple-900", "from-sky-400 to-blue-800", "from-orange-400 to-red-800",
-  "from-lime-400 to-green-800", "from-pink-400 to-rose-900", "from-cyan-400 to-slate-800",
-  "from-violet-500 to-indigo-950",
-];
 const PROJECTS = [
-  ["Enterprise Website Redesign", "Enterprise Website · UX/UI · Design System", "An end-to-end redesign focused on information architecture, product discovery and a scalable design system."],
-  ["E-Commerce Experience", "Responsive Website · UI Design", "A modern shopping experience across discovery, product detail and editorial content on every screen size."],
-  ["Hotel Management System", "Product UX/UI", "Simplifying bookings, records and reporting into calm, fast workflows for staff."],
-  ["Finance Dashboard", "SaaS · Data Visualization", "Turning dense financial data into a clear, glanceable dashboard for daily decisions."],
-  ["Brand Identity System", "Branding · Visual Design", "A bold identity and UI language that stays consistent across every touchpoint."],
-  ["Mobile Banking App", "Mobile App · UX Research", "A friendlier way to send, save and track money, shaped by user interviews and testing."],
-  ["Fitness Tracking App", "Mobile App · Interaction Design", "Motivating workouts with simple logging, progress visuals and playful micro-interactions."],
-  ["Healthcare Portal", "Web App · Accessibility", "An accessible patient portal for appointments, reports and doctor communication."],
-  ["Learning Platform", "EdTech · Product Design", "A focused learning experience with courses, progress tracking and community."],
-  ["Travel Booking Website", "Website · UX/UI", "Search, compare and book trips in fewer steps with a clean, inspiring interface."],
-].map(([name, tags, desc], i) => ({ name, tags, desc, color: PROJECT_COLORS[i] }));
+  ["Secure AI", "Mobile App · UX/UI", "An AI-powered logging app where every entry can carry photo and note proof, making records verifiable and easy to trust."],
+  ["GlamBook", "Beauty Booking App · UX/UI", "Search, compare and book the best beauty parlours nearby — a calm, visual booking flow for every beauty need."],
+  ["The Rusty Fork", "Hospitality Analytics · Dashboard", "A dark-mode analytics app for restaurants and hotels tracking revenue recovery, occupancy and waitlist success at a glance."],
+  ["Personal Safety App", "Mobile App · Safety", "One-tap SOS, live location and quick safety actions designed to be usable under stress."],
+  ["Babysitter Hiring App", "Marketplace · Mobile App", "Browse verified babysitters, compare ratings, experience and rates, and book trusted care with confidence."],
+  ["FiLL-N", "Jobs Marketplace · UI/UX Mobile App", "Find flexible shifts and hire top talent — set your availability and take control of your schedule."],
+  ["Creator Collab App", "Creator Economy · Mobile App", "Helps creators turn influence into income through brand partnerships, merch and paid collaborations."],
+  ["Athlete Sponsorship App", "iOS, Android & Web · Lead UI/UX", "Sponsored deals, affiliate partnerships and gifting campaigns for athletes — designed end to end in 12 weeks."],
+  ["Signer", "Mobile App · Product Design", "A focused mobile experience with clean notifications and a distraction-free interface."],
+  ["Gig Booking App", "Music & Events · Mobile App", "Musicians post gigs, manage applications, messages and bookings for events — all from one dashboard."],
+].map(([name, tags, desc], i) => ({ name, tags, desc, img: `/projects/project-${i + 1}.jpg` }));
 
 const STEPS = [
   {
@@ -74,8 +68,16 @@ function useReveal() {
       (es) => es.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
       { threshold: 0.15 },
     );
-    document.querySelectorAll(".reveal, .reveal-img").forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    const scan = () =>
+      document.querySelectorAll(".reveal:not(.in), .reveal-img:not(.in)").forEach((el) => io.observe(el));
+    scan();
+    // pick up elements that mount or re-render later (e.g. after hot reload)
+    const mo = new MutationObserver(scan);
+    mo.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+    };
   }, []);
 }
 
@@ -368,16 +370,9 @@ function Work() {
               {PROJECTS.map((x, i) => (
                 <div
                   key={x.name}
-                  className={`absolute inset-0 bg-gradient-to-br ${x.color} p-6 transition-all duration-700 ease-out ${i === active ? "scale-100 opacity-100" : "scale-[1.04] opacity-0"}`}
+                  className={`absolute inset-0 transition-all duration-700 ease-out ${i === active ? "scale-100 opacity-100" : "scale-[1.04] opacity-0"}`}
                 >
-                  <div className="flex h-full flex-col rounded-xl bg-white/10 p-4 backdrop-blur">
-                    <div className="flex gap-1.5">
-                      {[0, 1, 2].map((d) => (
-                        <span key={d} className="h-2.5 w-2.5 rounded-full bg-white/50" />
-                      ))}
-                    </div>
-                    <div className="mt-auto text-2xl font-black md:text-4xl">{x.name}</div>
-                  </div>
+                  <Image src={x.img} alt={x.name} fill sizes="(min-width: 768px) 640px, 100vw" priority={i === 0} className="object-cover" />
                 </div>
               ))}
             </div>
