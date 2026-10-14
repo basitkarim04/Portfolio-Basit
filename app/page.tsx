@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const NAME = "Eshfaq";
@@ -14,10 +15,6 @@ const NAV = [
   ["Approach", "#approach"],
   ["Resume", "#resume"],
   ["Let's talk", "#contact"],
-];
-const SKILLS = [
-  "User Interface Design", "Advanced Prototyping", "Typography & Grid Layouts", "Scalable Design Systems",
-  "Wireframing & User Flows", "User Research & Testing", "Accessibility (WCAG)", "Interaction Design",
 ];
 const PROJECT_COLORS = [
   "from-blue-600 to-indigo-900", "from-amber-500 to-rose-700", "from-emerald-500 to-teal-900",
@@ -170,7 +167,7 @@ export default function Home() {
       )}
 
       {/* Hero */}
-      <section id="home" className="relative flex min-h-[640px] h-screen flex-col items-center overflow-hidden bg-[var(--dark)]">
+      <section id="home" className="relative flex h-[112vh] min-h-[760px] flex-col items-center overflow-hidden bg-[var(--dark)]">
         {/* swirling background */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-1/2 top-1/2 h-[160vmax] w-[160vmax] -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite] bg-[repeating-conic-gradient(from_0deg,#0b0b0b_0deg_18deg,#1b1b1b_28deg_40deg,#0b0b0b_52deg_60deg)] opacity-90 blur-2xl" />
@@ -181,8 +178,8 @@ export default function Home() {
         {/* script name on a line */}
         <div className="absolute inset-x-0 top-[38%] flex items-center">
           <div className="h-px flex-1 bg-white/25" />
-          <span className="hand px-6 text-4xl text-white md:text-6xl">{NAME}</span>
-          <div className="w-[min(320px,40vw)]" />
+          <span className="hand px-6 text-4xl text-white md:text-6xl">Product</span>
+          <div className="w-[min(520px,64vw)] shrink-0" />
           <span className="hand hidden px-6 text-4xl text-white md:inline md:text-6xl">Designer</span>
           <div className="h-px flex-1 bg-white/25" />
         </div>
@@ -191,14 +188,12 @@ export default function Home() {
         <div
           className={`relative z-10 mt-[17vh] h-[42vh] max-h-[400px] w-[min(320px,60vw)] transition-all duration-1000 ${loaded ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
         >
-          <div className="absolute inset-0 translate-x-10 rotate-[8deg] rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md" />
-          <div className="absolute inset-0 -rotate-[6deg] overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-200 to-neutral-400 shadow-2xl">
-            <div className="flex h-full items-center justify-center text-8xl font-black text-black/15">
-              {NAME[0]}
-            </div>
-            <span className="absolute bottom-4 left-4 rounded-full bg-black/70 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
-              Add your photo
-            </span>
+          <div className="absolute inset-0 translate-x-10 rotate-[8deg] overflow-hidden rounded-2xl border border-white/20">
+            <Image src="/eshfaq.jpg" alt="" fill sizes="320px" className="scale-110 object-cover object-top opacity-70 blur-md" />
+            <div className="absolute inset-0 bg-[var(--dark)]/30" />
+          </div>
+          <div className="absolute inset-0 -rotate-[6deg] overflow-hidden rounded-2xl shadow-2xl">
+            <Image src="/eshfaq.jpg" alt={FULL_NAME} fill priority sizes="320px" className="object-cover object-top" />
           </div>
           <div className="absolute -left-12 -top-6 flex h-24 w-24 items-center justify-center">
             <svg viewBox="0 0 100 100" className="absolute inset-0 animate-[spin_12s_linear_infinite]">
@@ -220,41 +215,28 @@ export default function Home() {
           Designing what comes next.
         </p>
 
-        {/* giant name */}
+        {/* giant name — letters rise out of masks */}
         <h1
-          className={`pointer-events-none absolute -bottom-[0.18em] z-20 select-none whitespace-nowrap text-[23vw] font-black leading-none tracking-tighter text-white transition-all delay-200 duration-1000 md:text-[19vw] ${loaded ? "translate-y-0 opacity-100" : "translate-y-1/3 opacity-0"}`}
+          aria-label={FULL_NAME}
+          className="pointer-events-none absolute bottom-[2vh] z-20 flex select-none whitespace-nowrap text-[25vw] font-black leading-[0.95] tracking-tighter text-white"
         >
-          {NAME.slice(0, -1)}
-          <span className="font-serif font-normal italic text-[var(--accent)]">{NAME.slice(-1)}</span>
+          {NAME.split("").map((ch, i) => {
+            const last = i === NAME.length - 1;
+            return (
+              <span key={i} aria-hidden className="inline-block overflow-hidden pb-[0.08em]">
+                <span
+                  className={`inline-block transition-transform duration-1000 ease-[cubic-bezier(.2,.8,.2,1)] ${loaded ? "translate-y-0" : "translate-y-[110%]"} ${last ? "pr-[0.06em] font-serif font-normal italic text-[var(--accent)]" : ""}`}
+                  style={{ transitionDelay: `${300 + i * 70}ms` }}
+                >
+                  {ch}
+                </span>
+              </span>
+            );
+          })}
         </h1>
       </section>
 
       <About />
-
-      {/* Stats */}
-      <section className="bg-[var(--dark2)] py-14 text-white">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-5 sm:grid-cols-3">
-          {[
-            ["100+", "Clients\nOnboarded"],
-            ["∞", "Ideas"],
-            ["03+", "Years of\nExperience"],
-          ].map(([n, l]) => (
-            <div key={l} className="flex items-center gap-5">
-              <span className="text-6xl font-black italic">{n}</span>
-              <span className="whitespace-pre-line text-lg uppercase leading-snug tracking-widest">{l}</span>
-            </div>
-          ))}
-        </div>
-        <div className="mt-12 overflow-hidden">
-          <div className="marquee flex w-max gap-5">
-            {[...SKILLS, ...SKILLS].map((s, i) => (
-              <span key={i} className={`pill hand whitespace-nowrap px-6 py-3 text-lg text-white/70 ${i % 2 ? "rotate-2" : "-rotate-2"}`}>
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Work />
 
@@ -363,24 +345,24 @@ function Work() {
   };
 
   return (
-    <section id="work" className="bg-[var(--dark2)] px-5 pt-28 text-white md:px-10">
+    <section id="work" className="bg-[var(--dark2)] px-5 pt-24 text-white md:px-10">
       <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-6">
         <div>
-          <span className="pill reveal">Selected work</span>
-          <h2 className="reveal mt-6 text-4xl font-bold md:text-5xl">
+          <span className="pill">Selected work</span>
+          <h2 className="mt-6 text-4xl font-bold md:text-5xl">
             A Few Things I’ve
             <br />
             <span className="text-[var(--accent)]">Designed.</span>
           </h2>
         </div>
-        <p className="reveal max-w-xs text-white/60">
+        <p className="max-w-xs text-white/60">
           Every project is shaped around the people using it, with a focus on clarity and character.
         </p>
       </div>
 
       <div ref={track} style={{ height: `${PROJECTS.length * 100}vh` }}>
-        <div className="sticky top-0 flex h-screen items-center">
-          <div className="mx-auto grid w-full max-w-6xl items-center gap-8 pt-12 md:grid-cols-[1.4fr_1fr] md:gap-14">
+        <div className="sticky top-0 flex h-screen items-start pt-24 md:items-center md:pt-0">
+          <div className="mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
             {/* Images */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               {PROJECTS.map((x, i) => (
@@ -612,33 +594,12 @@ const VISION = [
   "usable, accessible, and",
   "built to scale.",
 ];
-const LOGOS = ["Company One", "Studio Two", "Brand Three", "Agency Four", "Startup Five", "Product Six"];
-
-function RollingDigit({ to, on, delay }: { to: number; on: boolean; delay: number }) {
-  // roll through 0-9 once, then land on the target digit
-  const steps = 10 + to;
-  return (
-    <span className="inline-block h-[1em] overflow-hidden align-top leading-none">
-      <span
-        className="flex flex-col transition-transform duration-[1800ms] ease-[cubic-bezier(.2,.8,.2,1)]"
-        style={{ transform: on ? `translateY(-${steps}em)` : "none", transitionDelay: `${delay}ms` }}
-      >
-        {Array.from({ length: 20 }, (_, i) => (
-          <span key={i} className="h-[1em]">{i % 10}</span>
-        ))}
-      </span>
-    </span>
-  );
-}
 
 function About() {
   const ref = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const [seen, setSeen] = useState(false);
   const [fill, setFill] = useState(0);
   useEffect(() => {
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && setSeen(true), { threshold: 0.3 });
-    if (ref.current) io.observe(ref.current);
     let raf = 0;
     const update = () => {
       raf = 0;
@@ -655,7 +616,6 @@ function About() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      io.disconnect();
       window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(raf);
     };
@@ -673,40 +633,15 @@ function About() {
             But a habit.
           </p>
           <a
-            href="#resume"
+            href="#contact"
             className="group ml-auto flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_var(--accent)]"
           >
-            About Me
+            Hire Me
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
 
-        <div className="mt-14 grid gap-12 md:grid-cols-[220px_1fr]">
-          <div>
-            <p className="text-sm text-neutral-500">Clients Onboarded</p>
-            <div className="mt-2 flex text-7xl font-medium tracking-tight text-neutral-800">
-              <RollingDigit to={1} on={seen} delay={0} />
-              <RollingDigit to={0} on={seen} delay={150} />
-              <RollingDigit to={0} on={seen} delay={300} />
-              <span className="leading-none text-[var(--accent)]">+</span>
-            </div>
-            <div className="mt-12 flex items-center gap-3">
-              <div className="flex">
-                {["from-blue-500 to-indigo-700", "from-amber-400 to-rose-600", "from-emerald-400 to-teal-700", "from-fuchsia-400 to-purple-700", "from-sky-400 to-blue-700"].map((c, i) => (
-                  <span
-                    key={c}
-                    className={`-ml-2 h-9 w-9 rounded-full border-2 border-[var(--light)] bg-gradient-to-br ${c} transition-all duration-500 first:ml-0 ${seen ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
-                    style={{ transitionDelay: `${300 + i * 80}ms` }}
-                  />
-                ))}
-              </div>
-              <div>
-                <p className="text-xs tracking-widest text-[var(--accent)]">★★★★★</p>
-                <p className="text-[11px] leading-tight text-neutral-500">3+ years designing<br />web &amp; mobile</p>
-              </div>
-            </div>
-          </div>
-
+        <div className="mt-14">
           <div ref={textRef} className="text-3xl font-medium leading-tight tracking-tight md:text-right md:text-[2.6rem]">
             {VISION.map((line, i) => {
               const p = Math.min(1, Math.max(0, fill * VISION.length - i)) * 100;
@@ -726,16 +661,6 @@ function About() {
           </div>
         </div>
 
-        <div className="relative mt-20 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_15%,black_85%,transparent)]">
-          <div className="marquee flex w-max gap-16">
-            {[...LOGOS, ...LOGOS].map((l, i) => (
-              <span key={i} className="flex items-center gap-2 whitespace-nowrap text-2xl font-black tracking-tight text-neutral-400">
-                <span className="h-6 w-6 rounded-md border-[3px] border-neutral-400" />
-                {l}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
