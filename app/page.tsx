@@ -152,7 +152,7 @@ export default function Home() {
             className="group flex w-fit items-center gap-3 justify-self-end rounded-full bg-white py-1.5 pl-6 pr-1.5 text-sm font-semibold text-black shadow-lg"
           >
             Let&apos;s Talk
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--accent)] text-xl text-white transition-transform duration-300 group-hover:rotate-90">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--accent)] text-xl text-black transition-transform duration-300 group-hover:rotate-90">
               +
             </span>
           </a>
@@ -206,7 +206,7 @@ export default function Home() {
                 <textPath href="#badge">UI/UX Designer • Open to work •</textPath>
               </text>
             </svg>
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--accent)] text-lg text-white">↗</span>
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--accent)] text-lg text-black">↗</span>
           </div>
         </div>
 
@@ -286,7 +286,7 @@ export default function Home() {
         <p className="reveal mx-auto mt-8 max-w-md text-neutral-600">
           Have a project, idea, or a problem to solve? Let&apos;s turn it into a great experience together.
         </p>
-        <a href={`mailto:${EMAIL}`} className="reveal mt-10 inline-block rounded-md bg-[var(--accent)] px-10 py-5 text-sm font-bold uppercase tracking-widest text-white hover:brightness-110">
+        <a href={`mailto:${EMAIL}`} className="reveal mt-10 inline-block rounded-md bg-[var(--accent)] px-10 py-5 text-sm font-bold uppercase tracking-widest text-black hover:brightness-110">
           Start a conversation ↗
         </a>
         <div className="reveal mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold">
@@ -403,7 +403,7 @@ function Work() {
                 ))}
               </div>
               <div className="mt-8 flex items-end gap-5">
-                <a href="#" className="rounded-md bg-[var(--accent)] px-7 py-4 text-sm font-bold uppercase tracking-widest hover:brightness-110">
+                <a href="#" className="rounded-md bg-[var(--accent)] text-black px-7 py-4 text-sm font-bold uppercase tracking-widest hover:brightness-110">
                   View case study ↗
                 </a>
                 <span className="hand text-lg leading-tight text-white/50">Tap to view<br />full case study</span>
@@ -427,7 +427,7 @@ function Work() {
 }
 
 const TESTIMONIALS = [
-  ["Client Name", "Founder, Company One", "Working with " + NAME + " transformed our product. Every screen felt intentional, and our users noticed the difference right away.", "from-blue-500 to-indigo-800"],
+  ["Client Name", "Founder, Company One", "Working with " + NAME + " transformed our product. Every screen felt intentional, and our users noticed the difference right away.", "from-lime-400 to-green-800"],
   ["Client Name", "Product Manager, Company Two", "Clear thinking, beautiful execution. " + NAME + " turned a messy set of requirements into a simple, scalable design system.", "from-amber-400 to-rose-700"],
   ["Client Name", "Co-Founder, Company Three", "Fast, thoughtful and easy to collaborate with. The research-driven approach helped us make confident product decisions.", "from-emerald-400 to-teal-800"],
   ["Client Name", "CEO, Company Four", "From wireframes to final UI, the attention to detail was outstanding. Our conversion improved after the redesign.", "from-fuchsia-500 to-purple-900"],
@@ -551,7 +551,7 @@ function Process() {
                     <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
                     STEP:0{i + 1}
                   </span>
-                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--accent)] text-xl font-black uppercase text-white">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--accent)] text-xl font-black uppercase text-black">
                     {s.key.slice(0, 2)}
                   </span>
                 </div>
@@ -629,7 +629,7 @@ function About() {
           </p>
           <a
             href="#contact"
-            className="group ml-auto flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_var(--accent)]"
+            className="group ml-auto flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
           >
             Hire Me
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
