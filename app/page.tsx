@@ -313,7 +313,7 @@ export default function Home() {
           <a href="#home" className="text-xs font-bold uppercase tracking-wider">↑ Back to top</a>
         </div>
         <div className="mt-10 select-none text-center text-[22vw] font-black uppercase leading-[0.8] text-white/90">
-          {NAME}
+          {NAME.slice(0, -1)}<span className="text-[var(--accent)]">{NAME.slice(-1)}</span>
         </div>
         <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 py-6 text-xs text-white/50">
           <span>Designed &amp; built with curiosity.</span>
