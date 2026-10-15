@@ -765,9 +765,9 @@ function About() {
   return (
     <section id="about" ref={ref} className="bg-[var(--light)] px-5 pb-16 pt-24 md:px-10">
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-wrap items-center gap-6 border-b border-neutral-300 pb-8">
+        <div className="flex flex-col items-center gap-4 border-b border-neutral-300 pb-8 text-center md:flex-row md:flex-wrap md:gap-6 md:text-left">
           <h2 className="text-6xl font-medium tracking-tight md:text-7xl">About</h2>
-          <div className="h-14 w-px bg-neutral-300" />
+          <div className="hidden h-14 w-px bg-neutral-300 md:block" />
           <p className="text-sm leading-snug text-neutral-600">
             Consistency turns good work
             <br />
@@ -777,7 +777,7 @@ function About() {
             href="https://www.linkedin.com/in/muhammad-ishfaq-/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group ml-auto flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
+            className="group ml-auto hidden md:flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
           >
             Hire Me
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
@@ -785,7 +785,7 @@ function About() {
         </div>
 
         <div className="mt-14">
-          <div ref={textRef} className="text-3xl font-medium leading-tight tracking-tight md:text-right md:text-[2.1rem] lg:text-[2.4rem]">
+          <div ref={textRef} className="text-center text-3xl font-medium leading-tight tracking-tight md:text-right md:text-[2.1rem] lg:text-[2.4rem]">
             {VISION.map((line, i) => {
               const p = Math.min(1, Math.max(0, fill * VISION.length - i)) * 100;
               return (
@@ -803,6 +803,16 @@ function About() {
             })}
           </div>
         </div>
+
+          <a
+            href="https://www.linkedin.com/in/muhammad-ishfaq-/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-10 flex w-full items-center justify-center gap-4 md:hidden rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
+          >
+            Hire Me
+            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
+          </a>
 
       </div>
     </section>
