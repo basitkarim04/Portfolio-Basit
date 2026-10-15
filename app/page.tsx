@@ -724,7 +724,9 @@ function About() {
             into great work.
           </p>
           <a
-            href="#contact"
+            href="https://www.linkedin.com/in/muhammad-ishfaq-/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group ml-auto flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
           >
             Hire Me
