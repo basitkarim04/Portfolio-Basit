@@ -396,7 +396,7 @@ function Work() {
                     aria-hidden={i !== active}
                     className={`[grid-area:1/1] transition-all duration-500 ${i === active ? "translate-y-0 opacity-100 delay-150" : "pointer-events-none translate-y-4 opacity-0"}`}
                   >
-                    <h3 className="text-2xl font-bold leading-tight md:text-4xl">{x.name}</h3>
+                    <h3 className="text-xl font-bold leading-snug md:text-3xl">{x.name}</h3>
                     <p className="mt-3 text-sm text-white/50">{x.tags}</p>
                     <p className="mt-6 max-w-sm text-white/70">{x.desc}</p>
                   </div>
