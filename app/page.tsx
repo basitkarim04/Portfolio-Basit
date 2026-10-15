@@ -583,11 +583,10 @@ function Process() {
 }
 
 const VISION = [
-  "I design web and mobile",
-  "products that balance",
-  "user needs with business goals —",
-  "usable, accessible, and",
-  "built to scale.",
+  "I design web and mobile products that solve real problems,",
+  "improve user experience, and help businesses grow",
+  "with interfaces that are clean,",
+  "accessible, and scalable.",
 ];
 
 function About() {
@@ -623,9 +622,9 @@ function About() {
           <h2 className="text-6xl font-medium tracking-tight md:text-7xl">About</h2>
           <div className="h-14 w-px bg-neutral-300" />
           <p className="text-sm leading-snug text-neutral-600">
-            Excellence is not an act
+            Consistency turns good work
             <br />
-            But a habit.
+            into great work.
           </p>
           <a
             href="#contact"
@@ -637,7 +636,7 @@ function About() {
         </div>
 
         <div className="mt-14">
-          <div ref={textRef} className="text-3xl font-medium leading-tight tracking-tight md:text-right md:text-[2.6rem]">
+          <div ref={textRef} className="text-3xl font-medium leading-tight tracking-tight md:text-right md:text-[2.1rem] lg:text-[2.4rem]">
             {VISION.map((line, i) => {
               const p = Math.min(1, Math.max(0, fill * VISION.length - i)) * 100;
               return (
