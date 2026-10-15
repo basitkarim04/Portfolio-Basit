@@ -435,8 +435,8 @@ function Work() {
   };
 
   return (
-    <section id="work" className="bg-[var(--dark2)] px-5 pt-24 text-white md:px-10">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-6">
+    <section id="work" className="bg-[var(--dark2)] px-5 text-white md:px-10 md:pt-24">
+      <div className="mx-auto hidden max-w-6xl flex-col items-center justify-between gap-6 text-center md:flex md:flex-row md:flex-wrap md:items-end md:text-left">
         <div>
           <span className="pill">Selected work</span>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
@@ -451,10 +451,16 @@ function Work() {
       </div>
 
       <div ref={track} style={{ height: `${PROJECTS.length * 100}vh` }}>
-        <div className="sticky top-0 flex h-[100svh] items-start pt-20 md:h-screen md:items-center md:pt-0">
+        <div className="sticky top-0 flex h-[100svh] flex-col justify-center pt-16 md:h-screen md:flex-row md:items-center md:pt-0">
+          <div className="mb-5 text-center md:hidden">
+            <div className="[@media(max-height:620px)]:hidden"><span className="pill">Selected work</span></div>
+            <h2 className="mt-3 text-xl font-bold min-[360px]:text-2xl [@media(max-height:620px)]:mt-0">
+              A Few Things I’ve <span className="text-[var(--accent)]">Designed.</span>
+            </h2>
+          </div>
           <div className="mx-auto grid w-full max-w-6xl items-center gap-4 md:gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
             {/* Images */}
-            <div className="relative aspect-video overflow-hidden rounded-2xl md:aspect-[4/3]">
+            <div className="relative aspect-video overflow-hidden rounded-2xl md:aspect-[4/3] [@media(max-height:620px)]:aspect-[2/1]">
               {PROJECTS.map((x, i) => (
                 <div
                   key={x.name}
@@ -466,8 +472,8 @@ function Work() {
             </div>
 
             {/* Info */}
-            <div>
-              <div className="flex items-start">
+            <div className="text-center md:text-left">
+              <div className="flex items-start justify-center md:justify-start">
                 <div className="h-[0.9em] overflow-hidden text-5xl font-light md:text-7xl leading-[0.9] text-white/30 md:text-8xl">
                   <div className="transition-transform duration-700" style={{ transform: `translateY(-${active * 0.9}em)` }}>
                     {PROJECTS.map((_, i) => (
@@ -486,17 +492,17 @@ function Work() {
                   >
                     <h3 className="text-xl font-bold leading-snug md:text-3xl">{x.name}</h3>
                     <p className="mt-3 text-sm text-white/50">{x.tags}</p>
-                    <p className="mt-3 line-clamp-2 max-w-sm sm:line-clamp-3 text-sm text-white/70 md:mt-6 md:line-clamp-none md:text-base">{x.desc}</p>
+                    <p className="mx-auto mt-3 line-clamp-2 [@media(max-height:620px)]:hidden max-w-sm md:mx-0 sm:line-clamp-3 text-sm text-white/70 md:mt-6 md:line-clamp-none md:text-base">{x.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-5 flex items-end gap-5 md:mt-8">
-                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[var(--accent)] text-black px-5 py-3 text-xs font-bold uppercase md:px-7 md:py-4 md:text-sm tracking-widest hover:brightness-110">
+              <div className="mt-5 flex items-end justify-center gap-5 md:mt-8 md:justify-start">
+                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="w-full rounded-md bg-[var(--accent)] text-center text-black px-5 py-3 md:w-auto text-xs font-bold uppercase md:px-7 md:py-4 md:text-sm tracking-widest hover:brightness-110">
                   View case study ↗
                 </a>
                 <span className="hand hidden text-lg leading-tight text-white/50 sm:inline">Tap to view<br />full case study</span>
               </div>
-              <div className="mt-5 flex gap-1.5 md:mt-10">
+              <div className="mt-5 flex justify-center gap-1.5 md:mt-10 md:justify-start">
                 {PROJECTS.map((x, i) => (
                   <button
                     key={x.name}
