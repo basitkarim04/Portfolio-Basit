@@ -188,7 +188,7 @@ export default function Home() {
       )}
 
       {/* Hero */}
-      <section id="home" className="relative flex h-[112vh] min-h-[760px] flex-col items-center overflow-hidden bg-[var(--dark)]">
+      <section id="home" className="relative flex flex-col pb-[32vw] pt-[16vh] md:pb-0 md:pt-0 md:h-[112vh] md:min-h-[760px] items-center overflow-hidden bg-[var(--dark)]">
         {/* swirling background */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-1/2 top-1/2 h-[160vmax] w-[160vmax] -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite] bg-[repeating-conic-gradient(from_0deg,#0b0b0b_0deg_18deg,#1b1b1b_28deg_40deg,#0b0b0b_52deg_60deg)] opacity-90 blur-2xl" />
@@ -198,7 +198,7 @@ export default function Home() {
         <ImageTrail />
 
         {/* script name on a line */}
-        <div className="absolute inset-x-0 top-[38%] flex items-center">
+        <div className="absolute inset-x-0 top-[38%] hidden items-center md:flex">
           <div className="h-px flex-1 bg-white/25" />
           <span className="hand px-6 text-4xl text-white md:text-6xl">Product</span>
           <div className="w-[min(520px,64vw)] shrink-0" />
@@ -208,7 +208,7 @@ export default function Home() {
 
         {/* stacked photo cards */}
         <div
-          className={`relative z-10 mt-[17vh] h-[42vh] max-h-[400px] w-[min(320px,60vw)] transition-all duration-1000 ${loaded ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
+          className={`relative z-10 h-[42vh] md:mt-[17vh] max-h-[400px] w-[min(320px,60vw)] transition-all duration-1000 ${loaded ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
         >
           <div className="absolute inset-0 translate-x-10 rotate-[8deg] overflow-hidden rounded-2xl border border-white/20">
             <Image src="/eshfaq.jpg" alt="" fill sizes="320px" className="scale-110 object-cover object-top opacity-70 blur-md" />
@@ -230,9 +230,15 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="relative z-10 mt-8 flex w-full items-center md:hidden">
+          <div className="h-px flex-1 bg-white/25" />
+          <span className="hand px-4 text-4xl text-white">Product Designer</span>
+          <div className="h-px flex-1 bg-white/25" />
+        </div>
+
         {/* tagline */}
         <p
-          className={`relative z-10 mt-6 text-xs font-bold uppercase tracking-[0.35em] text-white/60 transition-all delay-300 duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
+          className={`relative z-10 mt-4 px-6 text-center md:mt-8 text-[10px] font-bold uppercase tracking-[0.25em] md:text-xs md:tracking-[0.35em] text-white/60 transition-all delay-300 duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
         >
           Designing for users, built for business.
         </p>
