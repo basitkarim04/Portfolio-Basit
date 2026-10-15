@@ -156,19 +156,19 @@ export default function Home() {
           </nav>
           <button
             onClick={() => setMenu(!menu)}
-            className="w-fit rounded-full border border-white/10 bg-black/60 px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl xl:hidden"
+            className="w-fit rounded-full border border-white/10 bg-black/60 px-4 py-3 sm:px-5 text-sm font-semibold text-white backdrop-blur-xl xl:hidden"
           >
             {menu ? "Close" : "Menu"}
           </button>
           <a
             href="#home"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/60 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 sm:h-12 sm:w-12 bg-black/60 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
           >
             EA
           </a>
           <a
             href="#contact"
-            className="group flex w-fit items-center gap-3 justify-self-end rounded-full bg-white py-1.5 pl-6 pr-1.5 text-sm font-semibold text-black shadow-lg"
+            className="group flex w-fit items-center gap-2 whitespace-nowrap justify-self-end rounded-full bg-white py-1.5 pl-4 pr-1.5 sm:gap-3 sm:pl-6 text-sm font-semibold text-black shadow-lg"
           >
             Let&apos;s Talk
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--accent)] text-xl text-black transition-transform duration-300 group-hover:rotate-90">
@@ -188,7 +188,7 @@ export default function Home() {
       )}
 
       {/* Hero */}
-      <section id="home" className="relative flex flex-col pb-[32vw] pt-[16vh] md:pb-0 md:pt-0 md:h-[112vh] md:min-h-[760px] items-center overflow-hidden bg-[var(--dark)]">
+      <section id="home" className="relative flex flex-col pb-[32vw] pt-[16vh] xl:h-[112vh] xl:min-h-[760px] xl:pb-0 xl:pt-0 items-center overflow-hidden bg-[var(--dark)]">
         {/* swirling background */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-1/2 top-1/2 h-[160vmax] w-[160vmax] -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite] bg-[repeating-conic-gradient(from_0deg,#0b0b0b_0deg_18deg,#1b1b1b_28deg_40deg,#0b0b0b_52deg_60deg)] opacity-90 blur-2xl" />
@@ -198,7 +198,7 @@ export default function Home() {
         <ImageTrail />
 
         {/* script name on a line */}
-        <div className="absolute inset-x-0 top-[38%] hidden items-center md:flex">
+        <div className="absolute inset-x-0 top-[38%] hidden items-center xl:flex">
           <div className="h-px flex-1 bg-white/25" />
           <span className="hand px-6 text-4xl text-white md:text-6xl">Product</span>
           <div className="w-[min(520px,64vw)] shrink-0" />
@@ -208,7 +208,7 @@ export default function Home() {
 
         {/* stacked photo cards */}
         <div
-          className={`relative z-10 h-[42vh] md:mt-[17vh] max-h-[400px] w-[min(320px,60vw)] transition-all duration-1000 ${loaded ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
+          className={`relative z-10 h-[42vh] xl:mt-[17vh] max-h-[400px] w-[min(320px,60vw)] transition-all duration-1000 ${loaded ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
         >
           <div className="absolute inset-0 translate-x-10 rotate-[8deg] overflow-hidden rounded-2xl border border-white/20">
             <Image src="/eshfaq.jpg" alt="" fill sizes="320px" className="scale-110 object-cover object-top opacity-70 blur-md" />
@@ -230,15 +230,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-8 flex w-full items-center md:hidden">
+        <div className="relative z-10 mt-8 flex w-full items-center xl:hidden">
           <div className="h-px flex-1 bg-white/25" />
-          <span className="hand px-4 text-4xl text-white">Product Designer</span>
+          <span className="hand px-4 text-4xl text-white md:text-5xl">Product Designer</span>
           <div className="h-px flex-1 bg-white/25" />
         </div>
 
         {/* tagline */}
         <p
-          className={`relative z-10 mt-4 px-6 text-center md:mt-8 text-[10px] font-bold uppercase tracking-[0.25em] md:text-xs md:tracking-[0.35em] text-white/60 transition-all delay-300 duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
+          className={`relative z-10 mt-4 px-6 text-center xl:mt-8 text-[10px] font-bold uppercase tracking-[0.25em] md:text-xs md:tracking-[0.35em] text-white/60 transition-all delay-300 duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
         >
           Designing for users, built for business.
         </p>
@@ -451,10 +451,10 @@ function Work() {
       </div>
 
       <div ref={track} style={{ height: `${PROJECTS.length * 100}vh` }}>
-        <div className="sticky top-0 flex h-screen items-start pt-24 md:items-center md:pt-0">
-          <div className="mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
+        <div className="sticky top-0 flex h-[100svh] items-start pt-20 md:h-screen md:items-center md:pt-0">
+          <div className="mx-auto grid w-full max-w-6xl items-center gap-4 md:gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
             {/* Images */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+            <div className="relative aspect-video overflow-hidden rounded-2xl md:aspect-[4/3]">
               {PROJECTS.map((x, i) => (
                 <div
                   key={x.name}
@@ -468,7 +468,7 @@ function Work() {
             {/* Info */}
             <div>
               <div className="flex items-start">
-                <div className="h-[0.9em] overflow-hidden text-7xl font-light leading-[0.9] text-white/30 md:text-8xl">
+                <div className="h-[0.9em] overflow-hidden text-5xl font-light md:text-7xl leading-[0.9] text-white/30 md:text-8xl">
                   <div className="transition-transform duration-700" style={{ transform: `translateY(-${active * 0.9}em)` }}>
                     {PROJECTS.map((_, i) => (
                       <div key={i} className="h-[0.9em]">{String(i + 1).padStart(2, "0")}</div>
@@ -477,7 +477,7 @@ function Work() {
                 </div>
                 <span className="ml-1 text-sm text-white/50">/{String(PROJECTS.length).padStart(2, "0")}</span>
               </div>
-              <div className="mt-6 grid">
+              <div className="mt-3 grid md:mt-6">
                 {PROJECTS.map((x, i) => (
                   <div
                     key={x.name}
@@ -486,17 +486,17 @@ function Work() {
                   >
                     <h3 className="text-xl font-bold leading-snug md:text-3xl">{x.name}</h3>
                     <p className="mt-3 text-sm text-white/50">{x.tags}</p>
-                    <p className="mt-6 max-w-sm text-white/70">{x.desc}</p>
+                    <p className="mt-3 line-clamp-2 max-w-sm sm:line-clamp-3 text-sm text-white/70 md:mt-6 md:line-clamp-none md:text-base">{x.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 flex items-end gap-5">
-                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[var(--accent)] text-black px-7 py-4 text-sm font-bold uppercase tracking-widest hover:brightness-110">
+              <div className="mt-5 flex items-end gap-5 md:mt-8">
+                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[var(--accent)] text-black px-5 py-3 text-xs font-bold uppercase md:px-7 md:py-4 md:text-sm tracking-widest hover:brightness-110">
                   View case study ↗
                 </a>
-                <span className="hand text-lg leading-tight text-white/50">Tap to view<br />full case study</span>
+                <span className="hand hidden text-lg leading-tight text-white/50 sm:inline">Tap to view<br />full case study</span>
               </div>
-              <div className="mt-10 flex gap-1.5">
+              <div className="mt-5 flex gap-1.5 md:mt-10">
                 {PROJECTS.map((x, i) => (
                   <button
                     key={x.name}
@@ -663,26 +663,26 @@ function Process() {
     <section id="approach" ref={ref} className="relative bg-[var(--dark)] text-white" style={{ height: `${n * 100}vh` }}>
       <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-x-0 top-[17%] select-none whitespace-nowrap px-5 text-[14vw] md:top-[24%] md:text-[8vw] font-semibold leading-none tracking-tight md:px-10"
+          className="pointer-events-none relative mb-6 w-full sm:mb-10 select-none whitespace-nowrap px-5 text-[14vw] font-semibold leading-none tracking-tight md:px-10 md:text-[11vw] xl:absolute xl:inset-x-0 xl:mb-0 xl:top-[24%] xl:text-[8vw]"
           style={{ transform: `translateX(${slide}vw)` }}
         >
           Our <span className="text-[var(--accent)]">Work</span>
         </div>
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-[19%] select-none whitespace-nowrap px-5 text-right text-[14vw] md:bottom-auto md:top-[52%] md:text-[8vw] font-semibold leading-none tracking-tight md:px-10"
+          className="pointer-events-none relative order-last mt-6 w-full sm:mt-10 select-none whitespace-nowrap px-5 text-right text-[14vw] font-semibold leading-none tracking-tight md:px-10 md:text-[11vw] xl:absolute xl:inset-x-0 xl:order-none xl:mt-0 xl:top-[52%] xl:text-[8vw]"
           style={{ transform: `translateX(${-slide}vw)` }}
         >
           Process
         </div>
 
-        <div className="relative h-[350px] w-[min(440px,86vw)] md:h-[360px]">
+        <div className="relative h-[330px] w-[min(440px,88vw)] sm:h-[350px] md:h-[360px]">
           {STEPS.map((s, i) => {
             const t = fly(i);
             const last = i === n - 1;
             return (
               <article
                 key={s.key}
-                className="absolute inset-0 flex flex-col rounded-3xl bg-white p-7 text-black shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] will-change-transform"
+                className="absolute inset-0 flex flex-col rounded-3xl bg-white p-5 text-black sm:p-7 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] will-change-transform"
                 style={{
                   zIndex: n - i,
                   transform: last
@@ -695,16 +695,16 @@ function Process() {
                     <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
                     STEP:0{i + 1}
                   </span>
-                  <span className="flex h-20 w-28 items-center justify-center rounded-2xl bg-[var(--accent)] p-2.5">
+                  <span className="flex h-16 w-24 items-center justify-center rounded-2xl bg-[var(--accent)] p-2 sm:h-20 sm:w-28 sm:p-2.5">
                     <svg viewBox="0 0 112 80" className="h-full w-full" aria-hidden>
                       {STEP_VISUALS[i]}
                     </svg>
                   </span>
                 </div>
                 <p className="mt-4 text-xs font-bold uppercase tracking-widest text-neutral-500">{s.key}</p>
-                <h3 className="mt-auto text-2xl font-bold">{s.title}</h3>
+                <h3 className="mt-auto text-xl font-bold sm:text-2xl">{s.title}</h3>
                 <p className="mt-2 text-sm text-neutral-600">{s.desc}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
                   {s.acts.map((a) => (
                     <span key={a} className="rounded-full bg-neutral-100 px-3 py-1 text-xs">
                       {a}
