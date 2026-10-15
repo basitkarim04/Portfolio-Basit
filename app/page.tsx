@@ -17,16 +17,16 @@ const NAV = [
   ["Let's talk", "#contact"],
 ];
 const PROJECTS = [
-  ["Secure AI", "Mobile App · UX/UI", "An AI-powered logging app where every entry can carry photo and note proof, making records verifiable and easy to trust."],
-  ["GlamBook", "Beauty Booking App · UX/UI", "Search, compare and book the best beauty parlours nearby — a calm, visual booking flow for every beauty need."],
-  ["The Rusty Fork", "Hospitality Analytics · Dashboard", "A dark-mode analytics app for restaurants and hotels tracking revenue recovery, occupancy and waitlist success at a glance."],
-  ["Personal Safety App", "Mobile App · Safety", "One-tap SOS, live location and quick safety actions designed to be usable under stress."],
-  ["Babysitter Hiring App", "Marketplace · Mobile App", "Browse verified babysitters, compare ratings, experience and rates, and book trusted care with confidence."],
-  ["FiLL-N", "Jobs Marketplace · UI/UX Mobile App", "Find flexible shifts and hire top talent — set your availability and take control of your schedule."],
-  ["Wireless Boat Controller", "IoT · Mobile App", "A mobile controller for boats — set speed limits, switch between manual and auto modes and track live GPS speed from one screen."],
-  ["Athlete Sponsorship App", "iOS, Android & Web · Lead UI/UX", "Sponsored deals, affiliate partnerships and gifting campaigns for athletes — designed end to end in 12 weeks."],
-  ["Signer", "Mobile App · Product Design", "A focused mobile experience with clean notifications and a distraction-free interface."],
-  ["Gig Booking App", "Music & Events · Mobile App", "Musicians post gigs, manage applications, messages and bookings for events — all from one dashboard."],
+  ["Track Log Mobile App", "Mobile App UI/UX Design", "Secure mobile app for real-time and background GPS tracking, with encrypted logs, role-based access, and offline-to-online syncing."],
+  ["Beauty at your fingertips", "SaaS Mobile UI/UX Design", "GlamBook makes booking easy for local wellness businesses. Customers get a simple, trusted way to book, while independent practitioners get an easy system to manage their work."],
+  ["Hotel Booking SaaS Product Design", "SaaS Product UI/UX Design", "Traveller connects guests with high-demand lodging through a fast waitlist and booking app, while giving hotel managers powerful tools to fill vacant rooms instantly."],
+  ["Personal Tracking Mobile App Design", "SaaS Product UI/UX Design", "Trouble Cheat is a premium personal safety mobile application crafted for rapid, non-obtrusive security deployment when minutes turn into seconds."],
+  ["A safety-first marketplace for teen babysitters", "SaaS Mobile UI/UX Design", "StartSitter connects families with verified, trained teen babysitters (ages 11–17) through an admin-controlled platform. Every interaction—from sign-up to payment—is structured around safety, transparency, and accountability."],
+  ["Jobs Product Case Study", "Mobile App UI/UX Design", "A real-time staffing marketplace that connects businesses with nearby workers for short-term and urgent shifts — eliminating last-minute hiring chaos."],
+  ["Wireless Boat Controller Mobile App", "Mobile App", "An app that controls a boat’s speed and direction through Bluetooth/WiFi. It offers Manual and GPS Auto modes, live feedback, and emergency controls for safe, fast boat operation."],
+  ["Empowering female athlete brand partnership Products Design", "SaaS UI/UX Design", "The platform automates finding athletes, manages legal contracts safely, and tracks marketing campaigns so brands can clearly see their return on investment."],
+  ["Private Conversations SaaS Product Design", "SaaS Product UI/UX Design", "A connected mobile and desktop experience for guests, members, and creators — built around private identity, secure communication, and sustainable creator subscriptions."],
+  ["Mobile app where creators find events", "SaaS Product UI/UX Design", "OnlyGigz is a comprehensive three-sided marketplace built to manage performance lifecycles seamlessly across different stakeholder requirements."],
 ].map(([name, tags, desc], i) => ({ name, tags, desc, img: i === 6 ? "/projects/boat-controller.jpg" : `/projects/project-${i + 1}.jpg` }));
 
 const STEPS = [
@@ -396,7 +396,7 @@ function Work() {
                     aria-hidden={i !== active}
                     className={`[grid-area:1/1] transition-all duration-500 ${i === active ? "translate-y-0 opacity-100 delay-150" : "pointer-events-none translate-y-4 opacity-0"}`}
                   >
-                    <h3 className="text-3xl font-bold leading-tight md:text-5xl">{x.name}</h3>
+                    <h3 className="text-2xl font-bold leading-tight md:text-4xl">{x.name}</h3>
                     <p className="mt-3 text-sm text-white/50">{x.tags}</p>
                     <p className="mt-6 max-w-sm text-white/70">{x.desc}</p>
                   </div>
