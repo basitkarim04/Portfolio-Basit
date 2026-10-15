@@ -657,13 +657,13 @@ function Process() {
     <section id="approach" ref={ref} className="relative bg-[var(--dark)] text-white" style={{ height: `${n * 100}vh` }}>
       <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-x-0 top-[24%] select-none whitespace-nowrap px-5 text-[8vw] font-semibold leading-none tracking-tight md:px-10"
+          className="pointer-events-none absolute inset-x-0 top-[17%] select-none whitespace-nowrap px-5 text-[14vw] md:top-[24%] md:text-[8vw] font-semibold leading-none tracking-tight md:px-10"
           style={{ transform: `translateX(${slide}vw)` }}
         >
           Our <span className="text-[var(--accent)]">Work</span>
         </div>
         <div
-          className="pointer-events-none absolute inset-x-0 top-[52%] select-none whitespace-nowrap px-5 text-right text-[8vw] font-semibold leading-none tracking-tight md:px-10"
+          className="pointer-events-none absolute inset-x-0 bottom-[19%] select-none whitespace-nowrap px-5 text-right text-[14vw] md:bottom-auto md:top-[52%] md:text-[8vw] font-semibold leading-none tracking-tight md:px-10"
           style={{ transform: `translateX(${-slide}vw)` }}
         >
           Process
