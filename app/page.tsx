@@ -10,11 +10,12 @@ const PHONE = "+92 334 6667631";
 const RESUME = "/Eshfaq-Ahmad-Resume.pdf";
 const TOOLS = ["Figma", "Framer", "Photoshop", "Illustrator", "Miro", "Claude.ai", "Google Stitch", "Jira", "Slack"];
 const NAV = [
+  ["Home", "#home"],
   ["About me", "#about"],
   ["Work", "#work"],
   ["Approach", "#approach"],
   ["Resume", "#resume"],
-  ["Let's talk", "#contact"],
+  ["Contact", "#contact"],
 ];
 const LINKS = [
   "252830071/Track-Log-Mobile-app",
@@ -142,12 +143,12 @@ export default function Home() {
       {/* Header */}
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center">
-          <nav className="hidden w-fit gap-1 rounded-full border border-white/10 bg-black/60 shadow-lg p-1.5 backdrop-blur-xl md:flex">
-            {NAV.slice(0, 4).map(([l, h]) => (
+          <nav className="hidden w-fit gap-1 rounded-full border border-white/10 bg-black/60 shadow-lg p-1.5 backdrop-blur-xl xl:flex">
+            {NAV.map(([l, h]) => (
               <a
                 key={h}
                 href={h}
-                className="rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black"
+                className="rounded-full bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black"
               >
                 {l}
               </a>
@@ -155,7 +156,7 @@ export default function Home() {
           </nav>
           <button
             onClick={() => setMenu(!menu)}
-            className="w-fit rounded-full border border-white/10 bg-black/60 px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl md:hidden"
+            className="w-fit rounded-full border border-white/10 bg-black/60 px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl xl:hidden"
           >
             {menu ? "Close" : "Menu"}
           </button>
@@ -177,7 +178,7 @@ export default function Home() {
         </div>
       </header>
       {menu && (
-        <nav className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-black/95 backdrop-blur md:hidden">
+        <nav className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-black/95 backdrop-blur xl:hidden">
           {NAV.map(([l, h]) => (
             <a key={h} href={h} onClick={() => setMenu(false)} className="text-3xl font-black uppercase text-white">
               {l}
@@ -322,16 +323,25 @@ export default function Home() {
             {["Home#home", "About#about", "Projects#work", "Approach#approach", "Resume#resume", "Contact#contact"].map((x) => {
               const [l, h] = x.split("#");
               return (
-                <a key={h} href={`#${h}`} className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white">
+                <a key={h} href={`#${h}`} onClick={jump} className="relative cursor-pointer py-2 text-xs font-bold uppercase tracking-wider text-white/70 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[var(--accent)] after:transition-all hover:text-[var(--accent)] hover:after:w-full">
                   {l}
                 </a>
               );
             })}
           </nav>
-          <a href="#home" className="text-xs font-bold uppercase tracking-wider">↑ Back to top</a>
+          <a href="#home" onClick={jump} className="cursor-pointer py-2 text-xs font-bold uppercase tracking-wider transition-colors hover:text-[var(--accent)]">↑ Back to top</a>
         </div>
-        <div className="mt-10 select-none text-center text-[22vw] font-black uppercase leading-[0.8] text-white/90">
-          {NAME.slice(0, -1)}<span className="text-[var(--accent)]">{NAME.slice(-1)}</span>
+        <div aria-label={FULL_NAME} className="mt-10 flex select-none justify-center whitespace-nowrap text-[24vw] font-semibold leading-[0.95] tracking-tighter text-white">
+          {NAME.split("").map((ch, i) => (
+            <span key={i} aria-hidden className="reveal-img inline-block overflow-hidden pb-[0.08em]">
+              <span
+                className={`inline-block translate-y-[110%] transition-transform duration-1000 ease-[cubic-bezier(.2,.8,.2,1)] [.in>&]:translate-y-0 ${i === NAME.length - 1 ? "pr-[0.06em] font-serif font-normal italic text-[var(--accent)]" : ""}`}
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                {ch}
+              </span>
+            </span>
+          ))}
         </div>
         <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 py-6 text-xs text-white/50">
           <span>Designed &amp; built with curiosity.</span>
@@ -340,6 +350,16 @@ export default function Home() {
       </footer>
     </main>
   );
+}
+
+// in-page anchor jump that always lands, even if native smooth scrolling is interrupted
+function jump(e: React.MouseEvent<HTMLAnchorElement>) {
+  const id = e.currentTarget.getAttribute("href")?.slice(1);
+  const el = id && document.getElementById(id);
+  if (!el) return;
+  e.preventDefault();
+  history.replaceState(null, "", `#${id}`);
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: "smooth" });
 }
 
 function Work() {
