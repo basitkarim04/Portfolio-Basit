@@ -260,7 +260,7 @@ export default function Home() {
 
       <Work />
 
-      <Testimonials />
+      {/* <Testimonials /> — hidden for now */}
 
       <Process />
 
