@@ -162,9 +162,9 @@ export default function Home() {
           </button>
           <a
             href="#home"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 sm:h-12 sm:w-12 bg-black/60 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
+            className="relative block h-11 w-11 overflow-hidden rounded-full border border-white/15 sm:h-12 sm:w-12 bg-black/60 text-lg font-black tracking-tighter text-white backdrop-blur-xl"
           >
-            EA
+            <Image src="/eshfaq.jpg" alt={FULL_NAME} fill sizes="48px" className="object-cover object-top" />
           </a>
           <a
             href="#contact"
