@@ -23,11 +23,11 @@ const PROJECTS = [
   ["Personal Safety App", "Mobile App · Safety", "One-tap SOS, live location and quick safety actions designed to be usable under stress."],
   ["Babysitter Hiring App", "Marketplace · Mobile App", "Browse verified babysitters, compare ratings, experience and rates, and book trusted care with confidence."],
   ["FiLL-N", "Jobs Marketplace · UI/UX Mobile App", "Find flexible shifts and hire top talent — set your availability and take control of your schedule."],
-  ["Creator Collab App", "Creator Economy · Mobile App", "Helps creators turn influence into income through brand partnerships, merch and paid collaborations."],
+  ["Wireless Boat Controller", "IoT · Mobile App", "A mobile controller for boats — set speed limits, switch between manual and auto modes and track live GPS speed from one screen."],
   ["Athlete Sponsorship App", "iOS, Android & Web · Lead UI/UX", "Sponsored deals, affiliate partnerships and gifting campaigns for athletes — designed end to end in 12 weeks."],
   ["Signer", "Mobile App · Product Design", "A focused mobile experience with clean notifications and a distraction-free interface."],
   ["Gig Booking App", "Music & Events · Mobile App", "Musicians post gigs, manage applications, messages and bookings for events — all from one dashboard."],
-].map(([name, tags, desc], i) => ({ name, tags, desc, img: `/projects/project-${i + 1}.jpg` }));
+].map(([name, tags, desc], i) => ({ name, tags, desc, img: i === 6 ? "/projects/boat-controller.jpg" : `/projects/project-${i + 1}.jpg` }));
 
 const STEPS = [
   {
