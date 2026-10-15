@@ -381,7 +381,7 @@ function ImageTrail() {
       });
       box.appendChild(img);
       requestAnimationFrame(() => {
-        img.style.opacity = "1";
+        img.style.opacity = "0.6";
         img.style.transform = `translate(-50%,-50%) scale(1) rotate(${rot}deg)`;
       });
       setTimeout(() => {
