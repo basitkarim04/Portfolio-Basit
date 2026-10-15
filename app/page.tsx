@@ -74,8 +74,8 @@ const STEPS = [
   },
 ];
 const JOURNEY = [
-  ["Nov 2024 — Present", "UI/UX Designer", "Slicon Systems", "Designing web and mobile applications from first concept to final UI — wireframes, user flows and high-fidelity Figma designs, accessible design systems, and redesigns that improve usability and navigation across multiple projects."],
-  ["Jan 2023 — Nov 2024", "UI/UX Designer", "Avialdo Solutions", "Redesigned web and mobile apps for smoother experiences, built design systems for consistency, applied accessibility best practices, and helped onboard 100+ clients through improved UX."],
+  ["Nov 2024 — Present", "Product Designer", "Slicon Systems", "Designing web and mobile applications from initial concept to final UI — collaborating with clients and developers, creating wireframes, user flows and high-fidelity Figma designs, building accessible, scalable design systems, and redesigning products to improve usability and navigation while managing multiple projects. Proactive in adopting AI workflows and modern design frameworks."],
+  ["Jan 2023 — Nov 2024", "Product Designer", "Avialdo Solutions", "Redesigned web and mobile apps for smoother experiences, built design systems for consistency, applied accessibility best practices, and worked with cross-functional teams to onboard 100+ clients — directly supporting revenue growth through improved UX. Also contributed to branding and visual design."],
   ["Certification", "UI Design", "California Institute of the Arts", "Specialized program in interface craft."],
   ["Certification", "UX Certification", "Memorisely Bootcamps", "Prototyping, design systems, typography and interaction design."],
 ];
@@ -310,8 +310,8 @@ export default function Home() {
         <div className="reveal mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold">
           <a href={`mailto:${EMAIL}`} className="hover:text-[var(--accent)]">{EMAIL}</a>
           <a href={`tel:${PHONE.replace(/ /g, "")}`} className="hover:text-[var(--accent)]">{PHONE}</a>
-          <a href="#" className="hover:text-[var(--accent)]">Behance ↗</a>
-          <a href="#" className="hover:text-[var(--accent)]">LinkedIn ↗</a>
+          <a href="https://www.behance.net/Eshfaqahmad" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)]">Behance ↗</a>
+          <a href="https://www.linkedin.com/in/muhammad-ishfaq-/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)]">LinkedIn ↗</a>
         </div>
       </section>
 
