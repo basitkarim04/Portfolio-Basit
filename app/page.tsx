@@ -331,11 +331,12 @@ export default function Home() {
           </nav>
           <a href="#home" onClick={jump} className="cursor-pointer py-2 text-xs font-bold uppercase tracking-wider transition-colors hover:text-[var(--accent)]">↑ Back to top</a>
         </div>
-        <div aria-label={FULL_NAME} className="mt-10 flex select-none justify-center whitespace-nowrap text-[24vw] font-semibold leading-[0.95] tracking-tighter text-white">
+        <div aria-label={FULL_NAME} className="relative mt-10 flex select-none justify-center whitespace-nowrap text-[24vw] font-semibold leading-[0.95] tracking-tighter">
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-[radial-gradient(ellipse_at_bottom,rgba(255,255,255,0.14),transparent_70%)]" />
           {NAME.split("").map((ch, i) => (
             <span key={i} aria-hidden className="reveal-img inline-block overflow-hidden pb-[0.08em]">
               <span
-                className={`inline-block translate-y-[110%] transition-transform duration-1000 ease-[cubic-bezier(.2,.8,.2,1)] [.in>&]:translate-y-0 ${i === NAME.length - 1 ? "pr-[0.06em] font-serif font-normal italic text-[var(--accent)]" : ""}`}
+                className={`inline-block translate-y-[110%] transition-transform duration-1000 ease-[cubic-bezier(.2,.8,.2,1)] [.in>&]:translate-y-0 bg-clip-text text-transparent ${i === NAME.length - 1 ? "bg-[linear-gradient(to_bottom,color-mix(in_srgb,var(--accent)_25%,transparent),var(--accent))] pr-[0.06em] font-serif font-normal italic" : "bg-[linear-gradient(to_bottom,rgba(255,255,255,0.06),rgba(255,255,255,0.4))]"}`}
                 style={{ transitionDelay: `${i * 70}ms` }}
               >
                 {ch}
