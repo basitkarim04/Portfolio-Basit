@@ -358,7 +358,7 @@ function Work() {
           </h2>
         </div>
         <p className="max-w-xs text-white/60">
-          Every project is shaped around the people using it, with a focus on clarity and character.
+          A few projects that show how I approach design: simple, accessible, and purposeful.
         </p>
       </div>
 
