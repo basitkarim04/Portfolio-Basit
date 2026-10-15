@@ -43,28 +43,34 @@ const PROJECTS = [
 
 const STEPS = [
   {
-    key: "Map",
+    key: "Discover and Research",
     title: "Understand before designing.",
-    desc: "I explore the problem, context, users, goals and constraints to define the right direction.",
-    acts: ["User Research", "Problem Framing", "Context Analysis", "Defining Goals"],
+    desc: "I explore the problem, users, and goals to find the right direction.",
+    acts: ["User Research", "User Needs", "Context Analysis", "Defining Goals"],
   },
   {
-    key: "Organize",
-    title: "Bring structure to complexity.",
-    desc: "I turn insights into flows, information architecture and clear priorities.",
-    acts: ["Information Architecture", "User Flows", "Sitemaps", "Prioritization"],
+    key: "Define and Structure",
+    title: "Give ideas a clear direction.",
+    desc: "I organize insights, map user flows, and plan how the content fits together.",
+    acts: ["Problem Framing", "User Flows", "Content Structure", "Wireframes"],
   },
   {
-    key: "Visualize",
-    title: "Make ideas tangible.",
-    desc: "From wireframes to high-fidelity UI and prototypes, ideas become something people can feel.",
-    acts: ["Wireframing", "UI Design", "Prototyping", "Design Systems"],
+    key: "Design",
+    title: "Turn ideas into clear screens.",
+    desc: "I design simple, attractive screens that match the brand and meet user needs.",
+    acts: ["UI Design", "Colors & Fonts", "Components", "Visual Style"],
   },
   {
-    key: "Evolve",
-    title: "Test, learn, refine.",
-    desc: "I validate with real users and iterate until the experience truly works.",
-    acts: ["User Testing", "Iteration", "Handoff", "Measuring Impact"],
+    key: "Prototype",
+    title: "Bring the experience to life.",
+    desc: "I connect screens to show how users will move through and interact with the design.",
+    acts: ["Clickable Prototype", "Interactions", "Screen Flows", "Transitions"],
+  },
+  {
+    key: "Test",
+    title: "Learn, refine, and improve.",
+    desc: "I test the design with users, gather feedback, and make it easier to use.",
+    acts: ["Usability Testing", "User Feedback", "Refinements", "Validation"],
   },
 ];
 const JOURNEY = [
@@ -491,7 +497,7 @@ function Testimonials() {
   );
 }
 
-const CARD_TILT = [-8, 6, -4, 9];
+const CARD_TILT = [-8, 6, -4, 9, -5];
 
 function Process() {
   const ref = useRef<HTMLElement>(null);
@@ -564,9 +570,10 @@ function Process() {
                     STEP:0{i + 1}
                   </span>
                   <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--accent)] text-xl font-black uppercase text-black">
-                    {s.key.slice(0, 2)}
+                    {s.key.split(" ").filter((w) => w !== "and").map((w) => w[0]).join("")}
                   </span>
                 </div>
+                <p className="mt-4 text-xs font-bold uppercase tracking-widest text-neutral-500">{s.key}</p>
                 <h3 className="mt-auto text-2xl font-bold">{s.title}</h3>
                 <p className="mt-2 text-sm text-neutral-600">{s.desc}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
