@@ -203,7 +203,7 @@ export default function Home() {
                 <path id="badge" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
               </defs>
               <text className="fill-white text-[8.5px] font-bold uppercase tracking-[0.18em]">
-                <textPath href="#badge">UI/UX Designer • Open to work •</textPath>
+                <textPath href="#badge" textLength="236" lengthAdjust="spacing">Product Designer • Open to work •</textPath>
               </text>
             </svg>
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--accent)] text-lg text-black">↗</span>
@@ -214,13 +214,13 @@ export default function Home() {
         <p
           className={`relative z-10 mt-6 text-xs font-bold uppercase tracking-[0.35em] text-white/60 transition-all delay-300 duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
         >
-          Designing what comes next.
+          Designing for users, built for business.
         </p>
 
         {/* giant name — letters rise out of masks */}
         <h1
           aria-label={FULL_NAME}
-          className="pointer-events-none absolute bottom-[2vh] z-20 flex select-none whitespace-nowrap text-[25vw] font-black leading-[0.95] tracking-tighter text-white"
+          className="pointer-events-none absolute bottom-[2vh] z-20 flex select-none whitespace-nowrap text-[25vw] font-semibold leading-[0.95] tracking-tighter text-white"
         >
           {NAME.split("").map((ch, i) => {
             const last = i === NAME.length - 1;
