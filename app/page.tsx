@@ -16,6 +16,18 @@ const NAV = [
   ["Resume", "#resume"],
   ["Let's talk", "#contact"],
 ];
+const LINKS = [
+  "252830071/Track-Log-Mobile-app",
+  "255912655/Salon-SaaS-Product-Case-Study",
+  "254881337/Hotel-booking-mobile-app-case-study",
+  "255251081/Tracking-mobile-app-case-study",
+  "255415875/Find-verify-caregiver-mobile-app-case-study",
+  "253000453/Jobs-Product-Case-Study-UIUX",
+  "252698935/Boat-Controller-Mobile-app",
+  "254786937/Empowering-Female-Athletes-Brand-Partnerships",
+  "256845549/Private-conversions-product-case-study",
+  "255580235/SaaS-Product-Case-Study-for-Music-Industry",
+];
 const PROJECTS = [
   ["Track Log Mobile App", "Mobile App UI/UX Design", "Secure mobile app for real-time and background GPS tracking, with encrypted logs, role-based access, and offline-to-online syncing."],
   ["Beauty at your fingertips", "SaaS Mobile UI/UX Design", "GlamBook makes booking easy for local wellness businesses. Customers get a simple, trusted way to book, while independent practitioners get an easy system to manage their work."],
@@ -27,7 +39,7 @@ const PROJECTS = [
   ["Empowering female athlete brand partnership Products Design", "SaaS UI/UX Design", "The platform automates finding athletes, manages legal contracts safely, and tracks marketing campaigns so brands can clearly see their return on investment."],
   ["Private Conversations SaaS Product Design", "SaaS Product UI/UX Design", "A connected mobile and desktop experience for guests, members, and creators — built around private identity, secure communication, and sustainable creator subscriptions."],
   ["Mobile app where creators find events", "SaaS Product UI/UX Design", "OnlyGigz is a comprehensive three-sided marketplace built to manage performance lifecycles seamlessly across different stakeholder requirements."],
-].map(([name, tags, desc], i) => ({ name, tags, desc, img: i === 6 ? "/projects/boat-controller.jpg" : `/projects/project-${i + 1}.jpg` }));
+].map(([name, tags, desc], i) => ({ name, tags, desc, link: "https://www.behance.net/gallery/" + LINKS[i], img: i === 6 ? "/projects/boat-controller.jpg" : `/projects/project-${i + 1}.jpg` }));
 
 const STEPS = [
   {
@@ -403,7 +415,7 @@ function Work() {
                 ))}
               </div>
               <div className="mt-8 flex items-end gap-5">
-                <a href="#" className="rounded-md bg-[var(--accent)] text-black px-7 py-4 text-sm font-bold uppercase tracking-widest hover:brightness-110">
+                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[var(--accent)] text-black px-7 py-4 text-sm font-bold uppercase tracking-widest hover:brightness-110">
                   View case study ↗
                 </a>
                 <span className="hand text-lg leading-tight text-white/50">Tap to view<br />full case study</span>
