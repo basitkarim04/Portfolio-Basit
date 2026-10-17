@@ -26,8 +26,13 @@ export default function Journey() {
               ))}
             </div>
           </div>
-          <a href={RESUME} download className="inline-block rounded-md border border-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black">
-            Download resume ↓
+          <a
+            href={RESUME}
+            download
+            className="btn-cta"
+          >
+            <span>Download resume</span>
+            <span className="btn-icon">↗</span>
           </a>
         </div>
       </section>

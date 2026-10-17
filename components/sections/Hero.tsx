@@ -18,9 +18,9 @@ export default function Hero({ loaded }: { loaded: boolean }) {
         {/* script name on a line */}
         <div className="absolute inset-x-0 top-[38%] hidden items-center xl:flex">
           <div className="h-px flex-1 bg-white/25" />
-          <span className="hand px-6 text-4xl text-white md:text-6xl">Product</span>
+          <span className="hand px-6 text-4xl text-white md:text-6xl">Full-Stack</span>
           <div className="w-[min(520px,64vw)] shrink-0" />
-          <span className="hand hidden px-6 text-4xl text-white md:inline md:text-6xl">Designer</span>
+          <span className="hand hidden px-6 text-4xl text-white md:inline md:text-6xl">Developer</span>
           <div className="h-px flex-1 bg-white/25" />
         </div>
 
@@ -29,11 +29,11 @@ export default function Hero({ loaded }: { loaded: boolean }) {
           className={`relative z-10 h-[42vh] xl:mt-[17vh] max-h-[400px] w-[min(320px,60vw)] transition-all duration-1000 ${loaded ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
         >
           <div className="absolute inset-0 translate-x-10 rotate-[8deg] overflow-hidden rounded-2xl border border-white/20">
-            <Image src="/eshfaq.jpg" alt="" fill sizes="320px" className="scale-110 object-cover object-top opacity-70 blur-md" />
+            <Image src="/icon.png" alt="" fill sizes="320px" className="scale-110 object-cover object-top opacity-70 blur-md" />
             <div className="absolute inset-0 bg-[var(--dark)]/30" />
           </div>
           <div className="absolute inset-0 -rotate-[6deg] overflow-hidden rounded-2xl shadow-2xl">
-            <Image src="/eshfaq.jpg" alt={FULL_NAME} fill priority sizes="320px" className="object-cover object-top" />
+            <Image src="/icon.png" alt={FULL_NAME} fill priority sizes="320px" className="object-cover object-top" />
           </div>
           <div className="absolute -left-12 -top-6 flex h-24 w-24 items-center justify-center">
             <svg viewBox="0 0 100 100" className="absolute inset-0 animate-[spin_12s_linear_infinite]">
@@ -41,7 +41,7 @@ export default function Hero({ loaded }: { loaded: boolean }) {
                 <path id="badge" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
               </defs>
               <text className="fill-white text-[8.5px] font-bold uppercase tracking-[0.18em]">
-                <textPath href="#badge" textLength="236" lengthAdjust="spacing">Product Designer • Open to work •</textPath>
+                <textPath href="#badge" textLength="236" lengthAdjust="spacing">Full-Stack Developer • Open to work •</textPath>
               </text>
             </svg>
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--accent)] text-lg text-black">↗</span>
@@ -50,7 +50,7 @@ export default function Hero({ loaded }: { loaded: boolean }) {
 
         <div className="relative z-10 mt-8 flex w-full items-center xl:hidden">
           <div className="h-px flex-1 bg-white/25" />
-          <span className="hand px-4 text-4xl text-white md:text-5xl">Product Designer</span>
+          <span className="hand px-4 text-4xl text-white md:text-5xl">Full-Stack Developer</span>
           <div className="h-px flex-1 bg-white/25" />
         </div>
 
@@ -58,7 +58,7 @@ export default function Hero({ loaded }: { loaded: boolean }) {
         <p
           className={`relative z-10 mt-4 px-6 text-center xl:mt-8 text-[10px] font-bold uppercase tracking-[0.25em] md:text-xs md:tracking-[0.35em] text-white/60 transition-all delay-300 duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
         >
-          Designing for users, built for business.
+          Building scalable web & mobile solutions, engineered for performance.
         </p>
 
         {/* giant name — letters rise out of masks */}

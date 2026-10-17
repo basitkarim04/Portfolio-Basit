@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="overflow-hidden bg-[var(--dark2)] px-5 pt-16 text-white md:px-10">
         <div className="mx-auto flex max-w-6xl flex-col items-stretch gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-6">
           <nav className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-6">
-            {["Home#home", "About#about", "Projects#work", "Approach#approach", "Resume#resume", "Contact#contact"].map((x) => {
+            {["Home#home", "About#about", "Projects#work", "Process#approach", "Experience#resume", "Contact#contact"].map((x) => {
               const [l, h] = x.split("#");
               return (
                 <a key={h} href={`#${h}`} onClick={jump} className="relative cursor-pointer rounded-full border border-white/10 bg-white/5 py-2.5 text-center text-[11px] font-bold md:rounded-none md:border-0 md:bg-transparent md:py-2 md:text-left md:text-xs uppercase tracking-wider text-white/70 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[var(--accent)] after:transition-all hover:text-[var(--accent)] hover:after:w-full">
@@ -33,7 +33,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-1 py-6 pb-20 text-center text-xs text-white/50 md:flex-row md:flex-wrap md:justify-between md:gap-2 md:pb-6 md:text-left">
-          <span>Designed &amp; built with curiosity.</span>
+          <span>Architected &amp; built with precision.</span>
           <span>© 2026 {FULL_NAME} • All rights reserved.</span>
         </div>
       </footer>

@@ -1,84 +1,153 @@
-export const NAME = "Eshfaq";
-export const FULL_NAME = "Eshfaq Ahmad";
-export const EMAIL = "eshfaqahmad33@gmail.com";
-export const PHONE = "+92 334 6667631";
-export const RESUME = "/Eshfaq-Ahmad-Resume.pdf";
-export const TOOLS = ["Figma", "Framer", "Photoshop", "Illustrator", "Miro", "Claude.ai", "Google Stitch", "Jira", "Slack"];
+export const NAME = "Basit";
+export const FULL_NAME = "Basit Karim";
+export const ROLE = "Full-Stack Developer";
+export const EMAIL = "basit.karimkarim@gmail.com";
+export const PHONE = "+92 332 0238534";
+export const LOCATION = "Karachi, Pakistan";
+export const RESUME = "/Basit-Karim-Resume.pdf";
+export const GITHUB = "https://github.com/basitkarim04";
+export const LINKEDIN = "https://www.linkedin.com/in/dev-basit-karim/";
+
+export const TOOLS = [
+  "React.js",
+  "React Native",
+  "Node.js",
+  "TypeScript",
+  "JavaScript",
+  "Express",
+  "Vue.js",
+  "Tailwind CSS",
+  "TanStack Query",
+  "Supabase",
+  "MongoDB",
+  "SQL Server",
+  "MySQL",
+  "Python",
+  "Laravel",
+  "PHP",
+  "ASP.NET",
+  "AWS",
+  "Firebase",
+  "GitHub CI/CD",
+  "Figma",
+];
+
 export const NAV = [
   ["Home", "#home"],
   ["About me", "#about"],
-  ["Work", "#work"],
-  ["Approach", "#approach"],
-  ["Resume", "#resume"],
+  ["Projects", "#work"],
+  ["Process", "#approach"],
+  ["Experience", "#resume"],
   ["Contact", "#contact"],
 ];
-export const LINKS = [
-  "252830071/Track-Log-Mobile-app",
-  "255912655/Salon-SaaS-Product-Case-Study",
-  "254881337/Hotel-booking-mobile-app-case-study",
-  "255251081/Tracking-mobile-app-case-study",
-  "255415875/Find-verify-caregiver-mobile-app-case-study",
-  "253000453/Jobs-Product-Case-Study-UIUX",
-  "252698935/Boat-Controller-Mobile-app",
-  "254786937/Empowering-Female-Athletes-Brand-Partnerships",
-  "256845549/Private-conversions-product-case-study",
-  "255580235/SaaS-Product-Case-Study-for-Music-Industry",
-];
+
 export const PROJECTS = [
-  ["Track Log Mobile App", "Mobile App UI/UX Design", "Secure mobile app for real-time and background GPS tracking, with encrypted logs, role-based access, and offline-to-online syncing."],
-  ["Beauty at your fingertips", "SaaS Mobile UI/UX Design", "GlamBook makes booking easy for local wellness businesses. Customers get a simple, trusted way to book, while independent practitioners get an easy system to manage their work."],
-  ["Hotel Booking SaaS Product Design", "SaaS Product UI/UX Design", "Traveller connects guests with high-demand lodging through a fast waitlist and booking app, while giving hotel managers powerful tools to fill vacant rooms instantly."],
-  ["Personal Tracking Mobile App Design", "SaaS Product UI/UX Design", "Trouble Cheat is a premium personal safety mobile application crafted for rapid, non-obtrusive security deployment when minutes turn into seconds."],
-  ["A safety-first marketplace for teen babysitters", "SaaS Mobile UI/UX Design", "StartSitter connects families with verified, trained teen babysitters (ages 11–17) through an admin-controlled platform. Every interaction—from sign-up to payment—is structured around safety, transparency, and accountability."],
-  ["Jobs Product Case Study", "Mobile App UI/UX Design", "A real-time staffing marketplace that connects businesses with nearby workers for short-term and urgent shifts — eliminating last-minute hiring chaos."],
-  ["Wireless Boat Controller Mobile App", "Mobile App", "An app that controls a boat’s speed and direction through Bluetooth/WiFi. It offers Manual and GPS Auto modes, live feedback, and emergency controls for safe, fast boat operation."],
-  ["Empowering female athlete brand partnership Products Design", "SaaS UI/UX Design", "The platform automates finding athletes, manages legal contracts safely, and tracks marketing campaigns so brands can clearly see their return on investment."],
-  ["Private Conversations SaaS Product Design", "SaaS Product UI/UX Design", "A connected mobile and desktop experience for guests, members, and creators — built around private identity, secure communication, and sustainable creator subscriptions."],
-  ["Mobile app where creators find events", "SaaS Product UI/UX Design", "OnlyGigz is a comprehensive three-sided marketplace built to manage performance lifecycles seamlessly across different stakeholder requirements."],
-].map(([name, tags, desc], i) => ({ name, tags, desc, link: "https://www.behance.net/gallery/" + LINKS[i], img: i === 6 ? "/projects/boat-controller.jpg" : `/projects/project-${i + 1}.jpg` }));
+  {
+    name: "Cross-Platform Mobile Application",
+    tags: "React Native CLI • Expo • App Store & Play Store",
+    desc: "Built and published a production cross-platform mobile application using React Native CLI and Expo to both the Apple App Store and Google Play Store with responsive UI and offline capabilities.",
+    link: GITHUB,
+    img: "/projects/project-1.jpg",
+  },
+  {
+    name: "Desktop ERP Monitoring System",
+    tags: "Python • Node.js • SQL Database • System Automation",
+    desc: "Architected a full desktop ERP monitoring solution using Python and Node.js for backend processing, integrated with a relational SQL database for high-integrity operational logging.",
+    link: GITHUB,
+    img: "/projects/project-2.jpg",
+  },
+  {
+    name: "Scalable REST APIs & Microservices",
+    tags: "Node.js • Express • Supabase • PHP & Laravel",
+    desc: "Developed and managed robust REST APIs handling secure authentication, complex business logic, third-party API data orchestration, and hybrid SQL/MongoDB storage.",
+    link: GITHUB,
+    img: "/projects/project-3.jpg",
+  },
+  {
+    name: "Production Web Applications & Portals",
+    tags: "React.js • Vue.js • Tailwind CSS • TanStack Query",
+    desc: "Transformed detailed Figma design systems into fast, accessible, interactive web interfaces powered by efficient state management and server-cache synchronization.",
+    link: GITHUB,
+    img: "/projects/project-4.jpg",
+  },
+  {
+    name: "CI/CD Pipelines & Multi-Cloud Deployment",
+    tags: "AWS • GitHub Actions • Firebase • Railway • cPanel",
+    desc: "Automated test and deployment pipelines across cloud infrastructure including AWS, Firebase, Railway, and Hostinger, achieving zero-downtime rollouts and rapid delivery.",
+    link: GITHUB,
+    img: "/projects/project-5.jpg",
+  },
+  {
+    name: "Database Architecture & Query Optimization",
+    tags: "SQL Server • Supabase • Stored Procedures • MongoDB",
+    desc: "Structured relational and NoSQL schemas, authored optimized stored procedures in SQL Server, and tuned query execution times for high-throughput enterprise workloads.",
+    link: GITHUB,
+    img: "/projects/project-6.jpg",
+  },
+];
 
 export const STEPS = [
   {
-    key: "Discover and Research",
-    title: "Understand before designing.",
-    desc: "I explore the problem, users, and goals to find the right direction.",
-    acts: ["User Research", "User Needs", "Context Analysis", "Defining Goals"],
+    key: "Architecture & Data Modeling",
+    title: "Plan before writing a single line.",
+    desc: "I explore system requirements, define relational and NoSQL schemas, and design scalable API contracts.",
+    acts: ["System Architecture", "Database Schema", "API Contracts", "Requirement Analysis"],
   },
   {
-    key: "Define and Structure",
-    title: "Give ideas a clear direction.",
-    desc: "I organize insights, map user flows, and plan how the content fits together.",
-    acts: ["Problem Framing", "User Flows", "Content Structure", "Wireframes"],
+    key: "Figma to Code & Frontend",
+    title: "Craft responsive, accessible interfaces.",
+    desc: "I transform design prototypes into pixel-perfect, accessible web and mobile UIs using React, React Native, Vue, and Tailwind CSS.",
+    acts: ["React & React Native", "Tailwind CSS", "TanStack Query", "Responsive UI"],
   },
   {
-    key: "Design",
-    title: "Turn ideas into clear screens.",
-    desc: "I design simple, attractive screens that match the brand and meet user needs.",
-    acts: ["UI Design", "Colors & Fonts", "Components", "Visual Style"],
+    key: "Backend & API Engineering",
+    title: "Power features with reliable logic.",
+    desc: "I build fast, secure REST APIs with Node.js, Express, Supabase, and Laravel, handling auth, validations, and third-party integrations.",
+    acts: ["REST APIs", "Node.js & Express", "Authentication", "Supabase & Laravel"],
   },
   {
-    key: "Prototype",
-    title: "Bring the experience to life.",
-    desc: "I connect screens to show how users will move through and interact with the design.",
-    acts: ["Clickable Prototype", "Interactions", "Screen Flows", "Transitions"],
+    key: "Database Optimization",
+    title: "Ensure speed, consistency, and integrity.",
+    desc: "I write efficient queries, build stored procedures, and optimize indexes across SQL Server, MySQL, and MongoDB.",
+    acts: ["Stored Procedures", "Query Tuning", "SQL Server / MySQL", "MongoDB & NoSQL"],
   },
   {
-    key: "Test",
-    title: "Learn, refine, and improve.",
-    desc: "I test the design with users, gather feedback, and make it easier to use.",
-    acts: ["Usability Testing", "User Feedback", "Refinements", "Validation"],
+    key: "CI/CD & Cloud Deployment",
+    title: "Ship with confidence.",
+    desc: "I automate delivery using GitHub CI/CD pipelines to AWS, Firebase, Railway, App Store, and Google Play Store.",
+    acts: ["GitHub CI/CD", "AWS & Firebase", "App Store & Play Store", "Automated Testing"],
   },
 ];
+
 export const JOURNEY = [
-  ["Nov 2024 — Present", "Product Designer", "Slicon Systems", "Designing web and mobile applications from initial concept to final UI — collaborating with clients and developers, creating wireframes, user flows and high-fidelity Figma designs, building accessible, scalable design systems, and redesigning products to improve usability and navigation while managing multiple projects. Proactive in adopting AI workflows and modern design frameworks."],
-  ["Jan 2023 — Nov 2024", "Product Designer", "Avialdo Solutions", "Redesigned web and mobile apps for smoother experiences, built design systems for consistency, applied accessibility best practices, and worked with cross-functional teams to onboard 100+ clients — directly supporting revenue growth through improved UX. Also contributed to branding and visual design."],
-  ["Certification", "UI Design", "California Institute of the Arts", "Specialized program in interface craft."],
-  ["Certification", "UX Certification", "Memorisely Bootcamps", "Prototyping, design systems, typography and interaction design."],
+  [
+    "2024 — Present",
+    "Full Stack Developer",
+    "Brand Revam",
+    "Developed and managed REST APIs using Node.js, Supabase, PHP, and Laravel, handling high-volume data operations and third-party integrations. Transformed Figma designs into responsive interfaces using React.js, Vue.js, Bootstrap, and Tailwind CSS. Deployed full-stack web applications to AWS, Hostinger, Firebase, Railway, and cPanel via GitHub CI/CD pipelines. Built & published cross-platform mobile apps to the App Store and Google Play Store using React Native CLI / Expo, and developed an ERP monitoring desktop system using Python and Node.js.",
+  ],
+  [
+    "Jan 2023 — Jan 2024",
+    ".NET Intern & SQL Server",
+    "Paperless Technology",
+    "Built dynamic, responsive user interfaces using ASP.NET and VB.NET front-end technologies. Optimized SQL Server databases and engineered stored procedures to improve query performance and data integrity.",
+  ],
+  [
+    "2022 — Present",
+    "Bachelor of Computer Science (8th Semester)",
+    "DHA Suffa University",
+    "Specializing in Software Engineering, Data Structures & Algorithms, Database Systems, Web Technologies, and Cloud Computing.",
+  ],
+  [
+    "2020 — 2022",
+    "Intermediate",
+    "Government National College",
+    "Pre-Engineering / Computer Science foundations.",
+  ],
 ];
 
 export const TESTIMONIALS = [
-  ["Client Name", "Founder, Company One", "Working with " + NAME + " transformed our product. Every screen felt intentional, and our users noticed the difference right away.", "from-lime-400 to-green-800"],
-  ["Client Name", "Product Manager, Company Two", "Clear thinking, beautiful execution. " + NAME + " turned a messy set of requirements into a simple, scalable design system.", "from-amber-400 to-rose-700"],
-  ["Client Name", "Co-Founder, Company Three", "Fast, thoughtful and easy to collaborate with. The research-driven approach helped us make confident product decisions.", "from-emerald-400 to-teal-800"],
-  ["Client Name", "CEO, Company Four", "From wireframes to final UI, the attention to detail was outstanding. Our conversion improved after the redesign.", "from-fuchsia-500 to-purple-900"],
+  ["Colleague & Lead", "Brand Revam", "Working with " + NAME + " transformed our engineering velocity. Every API was well-structured, and our web and mobile applications performed flawlessly.", "from-lime-400 to-green-800"],
+  ["Tech Lead", "Paperless Technology", "Clear analytical thinking and strong database knowledge. " + NAME + " optimized complex SQL stored procedures and built dependable UI components.", "from-amber-400 to-rose-700"],
+  ["Product Manager", "Client Projects", "Fast, thoughtful, and communicative. From Figma to deployed mobile and web apps, collaborating with " + NAME + " was a seamless experience.", "from-emerald-400 to-teal-800"],
 ];

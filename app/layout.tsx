@@ -6,8 +6,8 @@ const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
 const caveat = Caveat({ variable: "--font-hand", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Eshfaq Ahmad — Product Designer",
-  description: "Eshfaq Ahmad — Product Designer with 4 years of experience designing web and mobile products. User research, prototyping, design systems and interaction design.",
+  title: "Basit Karim — Full-Stack Developer",
+  description: "Basit Karim — Full-Stack Developer with experience building responsive web and mobile applications using React, React Native, Vue.js, and Node.js. Skilled in backend architecture, database optimization, and cloud deployment.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

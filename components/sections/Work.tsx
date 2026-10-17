@@ -30,24 +30,24 @@ export default function Work() {
     <section id="work" className="bg-[var(--dark2)] px-5 text-white md:px-10 md:pt-24">
       <div className="mx-auto hidden max-w-6xl flex-col items-center justify-between gap-6 text-center md:flex md:flex-row md:flex-wrap md:items-end md:text-left">
         <div>
-          <span className="pill">Selected work</span>
+          <span className="pill">Selected projects</span>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
             A Few Things I’ve
             <br />
-            <span className="text-[var(--accent)]">Designed.</span>
+            <span className="text-[var(--accent)]">Built.</span>
           </h2>
         </div>
         <p className="max-w-xs text-white/60">
-          A few projects that show how I approach design: simple, accessible, and purposeful.
+          A few projects highlighting my full-stack engineering work across web, mobile, and cloud environments.
         </p>
       </div>
 
       <div ref={track} style={{ height: `${PROJECTS.length * 100}vh` }}>
         <div className="sticky top-0 flex h-[100svh] flex-col justify-center pt-16 md:h-screen md:flex-row md:items-center md:pt-0">
           <div className="mb-5 text-center md:hidden">
-            <div className="[@media(max-height:620px)]:hidden"><span className="pill">Selected work</span></div>
+            <div className="[@media(max-height:620px)]:hidden"><span className="pill">Selected projects</span></div>
             <h2 className="mt-3 text-xl font-bold min-[360px]:text-2xl [@media(max-height:620px)]:mt-0">
-              A Few Things I’ve <span className="text-[var(--accent)]">Designed.</span>
+              A Few Things I’ve <span className="text-[var(--accent)]">Built.</span>
             </h2>
           </div>
           <div className="mx-auto grid w-full max-w-6xl items-center gap-4 md:gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
@@ -89,10 +89,16 @@ export default function Work() {
                 ))}
               </div>
               <div className="mt-5 flex items-end justify-center gap-5 md:mt-8 md:justify-start">
-                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="w-full rounded-md bg-[var(--accent)] text-center text-black px-5 py-3 md:w-auto text-xs font-bold uppercase md:px-7 md:py-4 md:text-sm tracking-widest hover:brightness-110">
-                  View case study ↗
+                <a
+                  href={PROJECTS[active].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cta w-full md:w-auto"
+                >
+                  <span>View project</span>
+                  <span className="btn-icon">↗</span>
                 </a>
-                <span className="hand hidden text-lg leading-tight text-white/50 sm:inline">Tap to view<br />full case study</span>
+                <span className="hand hidden text-lg leading-tight text-white/50 sm:inline">Tap to view<br />project details</span>
               </div>
               <div className="mt-5 flex justify-center gap-1.5 md:mt-10 md:justify-start">
                 {PROJECTS.map((x, i) => (

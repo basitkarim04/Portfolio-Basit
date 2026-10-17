@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { LINKEDIN } from "@/lib/data";
 
 const VISION = [
-  "I design web and mobile products that solve real problems,",
-  "improve user experience, and help businesses grow",
-  "with interfaces that are clean,",
-  "accessible, and scalable.",
+  "I build responsive web and mobile applications that solve real problems,",
+  "engineer scalable backends with Node.js, Supabase, and SQL,",
+  "and transform Figma designs into fast, reliable,",
+  "production-ready software experiences.",
 ];
 
 export default function About() {
@@ -42,18 +43,18 @@ export default function About() {
           <h2 className="text-6xl font-medium tracking-tight md:text-7xl">About</h2>
           <div className="hidden h-14 w-px bg-neutral-300 md:block" />
           <p className="text-sm leading-snug text-neutral-600">
-            Consistency turns good work
+            Clean code turns ideas
             <br />
-            into great work.
+            into scalable software.
           </p>
           <a
-            href="https://www.linkedin.com/in/muhammad-ishfaq-/"
+            href={LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
-            className="group ml-auto hidden md:flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
+            className="btn-cta ml-auto hidden md:inline-flex"
           >
-            Hire Me
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
+            <span>Hire Me</span>
+            <span className="btn-icon">↗</span>
           </a>
         </div>
 
@@ -77,15 +78,15 @@ export default function About() {
           </div>
         </div>
 
-          <a
-            href="https://www.linkedin.com/in/muhammad-ishfaq-/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-10 flex w-full items-center justify-center gap-4 md:hidden rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
-          >
-            Hire Me
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
-          </a>
+        <a
+          href={LINKEDIN}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-cta mt-10 justify-center md:hidden"
+        >
+          <span>Hire Me</span>
+          <span className="btn-icon">↗</span>
+        </a>
 
       </div>
     </section>
