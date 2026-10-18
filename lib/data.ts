@@ -120,36 +120,43 @@ export const STEPS = [
   },
 ];
 
-export const JOURNEY = [
+export const SITE_URL = "https://basit-dev-portfolio.vercel.app";
+
+export const JOURNEY: [string, string, string, string, string[]][] = [
   [
     "2026 — Present",
     "Full Stack Developer",
     "Slicon Systems",
-    "Flutter & Native Apps built & published cross-platform mobile apps to App Store and Google Play Store. Developed & deployed full-stack web applications to AWS,   optimized multi-stage Dockerfiles to keep production image sizes tiny, and used docker compose to simulate and orchestrate multi-container environments",
+    "Built and published cross-platform mobile apps to the App Store and Google Play Store using Flutter & Native technologies. Developed and deployed full-stack web applications to AWS, optimized multi-stage Dockerfiles to minimize production image footprints, and orchestrated multi-container environments using Docker Compose.",
+    ["Flutter", "React", "AWS", "Docker", "App Store", "Play Store"],
   ],
   [
-    "May 2024 — Auguest 2026",
+    "May 2024 — August 2026",
     "Full Stack Developer",
     "Brand Revam",
-    "Developed & Deployed full-stack web applications to AWS, Hostinger, Firebase, Railway, and cPanel via GitHub CI/CD pipelines. Built & published cross-platform mobile apps to the App Store and Google Play Store using React Native CLI / Expo, and developed an ERP monitoring desktop system using Python and Node.js.",
+    "Developed and deployed full-stack web applications to AWS, Hostinger, Firebase, Railway, and cPanel via GitHub CI/CD pipelines. Built & published cross-platform mobile apps to the App Store and Google Play Store using React Native CLI / Expo, and developed an ERP monitoring desktop system using Python and Node.js.",
+    ["React Native", "Node.js", "Python", "Supabase", "AWS", "GitHub CI/CD"],
   ],
   [
     "Jan 2023 — Jan 2024",
     ".NET Intern & SQL Server",
     "Paperless Technology",
     "Built dynamic, responsive user interfaces using ASP.NET and VB.NET front-end technologies. Optimized SQL Server databases and engineered stored procedures to improve query performance and data integrity.",
+    ["ASP.NET", "VB.NET", "SQL Server", "Stored Procedures", "Query Optimization"],
   ],
   [
-    "2022 — Present",
-    "Bachelor of Computer Science (8th Semester)",
+    "2022 — June 2026",
+    "Bachelor of Computer Science",
     "DHA Suffa University",
-    "Specializing in Software Engineering, Data Structures & Algorithms, Database Systems, Web Technologies, and Cloud Computing.",
+    "Specializing in Software Engineering, Data Structures & Algorithms, Distributed Database Systems, Web Technologies, and Cloud Computing architecture.",
+    ["Software Engineering", "Algorithms", "Databases", "Cloud Computing"],
   ],
   [
     "2020 — 2022",
-    "Intermediate",
+    "Intermediate in Pre-Engineering",
     "Government National College",
-    "Pre-Engineering / Computer Science foundations.",
+    "Pre-Engineering foundations in mathematics, analytical problem solving, and computer science.",
+    ["Pre-Engineering", "Computer Science", "Mathematics"],
   ],
 ];
 
