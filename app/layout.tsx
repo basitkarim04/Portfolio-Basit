@@ -1,10 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import { FULL_NAME, ROLE, SITE_URL, GITHUB, LINKEDIN, TOOLS } from "@/lib/data";
-
-const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
-const caveat = Caveat({ variable: "--font-hand", subsets: ["latin"] });
 
 export const viewport: Viewport = {
   themeColor: "#070707",
@@ -118,8 +114,14 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${caveat.variable} antialiased`}>
+    <html lang="en" className="antialiased">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

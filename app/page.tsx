@@ -10,6 +10,7 @@ import About from "@/components/sections/About";
 import Work from "@/components/sections/Work";
 import Process from "@/components/sections/Process";
 import Journey from "@/components/sections/Journey";
+import Blog from "@/components/sections/Blog";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       {/* <Testimonials /> — hidden for now */}
       <Process />
       <Journey />
+      <Blog />
       <Contact />
       <Footer />
     </main>

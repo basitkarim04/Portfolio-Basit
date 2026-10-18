@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="overflow-hidden bg-[var(--dark2)] px-5 pt-16 text-white md:px-10">
         <div className="mx-auto flex max-w-6xl flex-col items-stretch gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-6">
           <nav className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-6">
-            {["Home#home", "About#about", "Projects#work", "Process#approach", "Experience#resume", "Contact#contact"].map((x) => {
+            {["Home#home", "About#about", "Projects#work", "Process#approach", "Experience#resume", "Blog#blog", "Contact#contact"].map((x) => {
               const [l, h] = x.split("#");
               return (
                 <a key={h} href={`#${h}`} onClick={jump} className="relative cursor-pointer rounded-full border border-white/10 bg-white/5 py-2.5 text-center text-[11px] font-bold md:rounded-none md:border-0 md:bg-transparent md:py-2 md:text-left md:text-xs uppercase tracking-wider text-white/70 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[var(--accent)] after:transition-all hover:text-[var(--accent)] hover:after:w-full">

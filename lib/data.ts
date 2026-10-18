@@ -39,6 +39,7 @@ export const NAV = [
   ["Projects", "#work"],
   ["Process", "#approach"],
   ["Experience", "#resume"],
+  ["Blog", "#blog"],
   ["Contact", "#contact"],
 ];
 
@@ -165,3 +166,23 @@ export const TESTIMONIALS = [
   ["Tech Lead", "Paperless Technology", "Clear analytical thinking and strong database knowledge. " + NAME + " optimized complex SQL stored procedures and built dependable UI components.", "from-amber-400 to-rose-700"],
   ["Product Manager", "Client Projects", "Fast, thoughtful, and communicative. From Figma to deployed mobile and web apps, collaborating with " + NAME + " was a seamless experience.", "from-emerald-400 to-teal-800"],
 ];
+
+export const BLOG = {
+  tag: "AI & Insights",
+  titlePrefix: "Beyond Code,",
+  titleHighlight: "Into AI.",
+  desc: "I explore AI tools, review emerging technologies, and publish practical guides to help businesses work smarter.",
+  features: [
+    "Applied AI agent workflows and business automation systems.",
+    "Unbiased, hands-on breakdowns of modern LLMs & developer tools.",
+    "Actionable, step-by-step guides for technical founders and engineers.",
+  ],
+  ctaText: "Explore My Blogs",
+  ctaLink: "https://ai.nexleads.online/blog",
+  platform: "NexAI Guide",
+  platformTagline: "Curated AI guides & tech deep dives",
+  platformDomain: "ai.nexleads.online/blog",
+  readMoreText: "Read articles ↗",
+  previewMedia: "/nexai-blog.gif",
+};
+

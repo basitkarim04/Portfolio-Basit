@@ -5,6 +5,8 @@
   --dark: #070707;
   --dark2: #1a1a1a;
   --light: #f4f4f4;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-hand: "Caveat", cursive;
 }
 
 html { scroll-behavior: smooth; }
