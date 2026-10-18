@@ -9,9 +9,13 @@ export const GITHUB = "https://github.com/basitkarim04";
 export const LINKEDIN = "https://www.linkedin.com/in/dev-basit-karim/";
 
 export const TOOLS = [
-  "React.js",
+  "Flutter",
   "React Native",
   "Node.js",
+  "Python",
+  "Laravel",
+  "PHP",
+  "React.js",
   "TypeScript",
   "JavaScript",
   "Express",
@@ -22,9 +26,6 @@ export const TOOLS = [
   "MongoDB",
   "SQL Server",
   "MySQL",
-  "Python",
-  "Laravel",
-  "PHP",
   "ASP.NET",
   "AWS",
   "Firebase",
@@ -121,10 +122,16 @@ export const STEPS = [
 
 export const JOURNEY = [
   [
-    "2024 — Present",
+    "2026 — Present",
+    "Full Stack Developer",
+    "Slicon Systems",
+    "Flutter & Native Apps built & published cross-platform mobile apps to App Store and Google Play Store. Developed & deployed full-stack web applications to AWS,   optimized multi-stage Dockerfiles to keep production image sizes tiny, and used docker compose to simulate and orchestrate multi-container environments",
+  ],
+  [
+    "May 2024 — Auguest 2026",
     "Full Stack Developer",
     "Brand Revam",
-    "Developed and managed REST APIs using Node.js, Supabase, PHP, and Laravel, handling high-volume data operations and third-party integrations. Transformed Figma designs into responsive interfaces using React.js, Vue.js, Bootstrap, and Tailwind CSS. Deployed full-stack web applications to AWS, Hostinger, Firebase, Railway, and cPanel via GitHub CI/CD pipelines. Built & published cross-platform mobile apps to the App Store and Google Play Store using React Native CLI / Expo, and developed an ERP monitoring desktop system using Python and Node.js.",
+    "Developed & Deployed full-stack web applications to AWS, Hostinger, Firebase, Railway, and cPanel via GitHub CI/CD pipelines. Built & published cross-platform mobile apps to the App Store and Google Play Store using React Native CLI / Expo, and developed an ERP monitoring desktop system using Python and Node.js.",
   ],
   [
     "Jan 2023 — Jan 2024",

@@ -86,7 +86,11 @@ body {
   line-height: 1;
   transition: transform 250ms ease;
 }
-
+span.btn-icon {
+    background: var(--accent);
+    padding: 5px;
+    border-radius: 30px;
+}
 .btn-cta:hover .btn-icon {
   transform: translate(2px, -2px);
 }
