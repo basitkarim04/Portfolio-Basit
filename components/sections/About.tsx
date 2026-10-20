@@ -78,15 +78,6 @@ export default function About() {
           </div>
         </div>
 
-        <a
-          href={LINKEDIN}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-cta mt-10 justify-center md:hidden"
-        >
-          <span>Hire Me</span>
-          <span className="btn-icon">↗</span>
-        </a>
 
       </div>
     </section>

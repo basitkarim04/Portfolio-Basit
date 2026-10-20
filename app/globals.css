@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --accent: #75ea1b;
+  /* --accent: #75ea1b; */
+  --accent: #C50102;
   --dark: #070707;
   --dark2: #1a1a1a;
   --light: #f4f4f4;
@@ -64,7 +65,7 @@ body {
   height: 100%;
   width: 0;
   border-radius: 15px;
-  background-color: #75ea1b;
+  background-color: var(--accent);
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
